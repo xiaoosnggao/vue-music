@@ -2,251 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42af712c-57e0-4d1a-937d-53f22530846b" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/font/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/font/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/font/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/font/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/font/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/font/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/font/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/font/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/ico/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/img/contribution-sample.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/img/fort_awesome.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/img/glyphicons-halflings-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/img/glyphicons-halflings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/img/icon-flag.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/ZeroClipboard-1.1.7.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.babelrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jslint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vue-music.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/build.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/check-versions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/dev-client.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/dev-server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/webpack.base.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/webpack.dev.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/webpack.prod.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/dev.env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/prod.env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/test.env.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/.ruby-version" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/_config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/css/font-awesome-ie7.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/css/font-awesome-ie7.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/font/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/extras.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/font-awesome-ie7.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_extras.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/font-awesome-ie7.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/CNAME" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/ads/carbon-dark-vertical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/ads/carbon-light-horizontal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/ads/carbon-light-vertical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/brand-license.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/cheatsheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community/getting-support.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community/project-milestones.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community/reporting-bugs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community/requesting-new-icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/community/submitting-pull-requests.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/animated-spinner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/bordered-pulled.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/bulleted-lists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/button-dropdowns.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/button-groups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/custom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/form-inputs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/inline-icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/larger-icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/navigation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/rotated-flipped.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/examples/stacked.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/get-started.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/brand.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/currency.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/directional.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/medical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/text-editor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/video-player.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/icons/web-application.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/jumbotron-slider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/jumbotron.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/license-code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/license.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/stripe-ad.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/stripe-social.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tell-me-thanks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tests/rotated-flipped-inside-anchor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tests/rotated-flipped-inside-btn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tests/rotated-flipped.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tests/stacked-inside-anchor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/tests/stacked.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/thanks-to.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/whats-new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_includes/why.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_layouts/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_layouts/icon.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_plugins/icon_page_generator.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/_plugins/site.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/css/prettify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/css/pygments.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/font/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/extras.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/font-awesome-ie7.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_extras.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/font-awesome-ie7.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/ZeroClipboard-1.1.7.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/backbone.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/bootstrap-2.3.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/bootstrap-222.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/prettify.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/site.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/js/underscore.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/accordion.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/breadcrumbs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/button-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/close.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/component-animations.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/dropdowns.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/hero-unit.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/labels-badges.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/layouts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/media.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/modals.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/navs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/pager.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/popovers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/progress-bars.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/reset.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive-1200px-min.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive-767px-max.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive-768px-979px.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive-navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive-utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/responsive.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/scaffolding.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/sprites.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/tables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/thumbnails.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/tooltip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/type.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/bootstrap-2.3.2/wells.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/lazy.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/responsive-1200px-min.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/responsive-767px-max.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/responsive-768px-979px.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/responsive-navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/responsive.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/site.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/sticky-footer.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/assets/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/cheatsheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/community.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/design.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/examples.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/get-started.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/icons.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/license.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/Font-Awesome-3.2.1/src/whats-new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/css/style.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/js/jquery-1.9.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/js/sherd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/template/Footer.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/template/Search.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/e2e/custom-assertions/elementCount.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/e2e/nightwatch.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/e2e/runner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/e2e/specs/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/specs/Hello.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
     </list>
     <ignored path="vue-music.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -271,8 +27,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+                <state relative-caret-position="408">
+                  <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#21#0" expanded="true" />
                   </folding>
@@ -292,12 +48,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
+          <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-                  <folding />
+                <state relative-caret-position="255">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#257#306#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -305,8 +63,18 @@
           <file leaf-file-name="Search.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/template/Search.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+                <state relative-caret-position="136">
+                  <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Audio.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/template/Audio.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -331,8 +99,8 @@
           <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/assets/css/style.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="831" column="28" lean-forward="false" selection-start-line="831" selection-start-column="28" selection-end-line="831" selection-end-column="28" />
+                <state relative-caret-position="595">
+                  <caret line="844" column="24" lean-forward="true" selection-start-line="844" selection-start-column="24" selection-end-line="844" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -364,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/src/components/template/Audio.vue" />
       </list>
     </option>
   </component>
@@ -418,6 +187,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-music" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Font-Awesome-3.2.1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,15 +336,15 @@
       <option name="presentableId" value="Default" />
       <updated>1479792471196</updated>
       <workItem from="1479792472739" duration="1825000" />
-      <workItem from="1479794666676" duration="11407000" />
+      <workItem from="1479794666676" duration="12426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13232000" />
+    <option name="totallyTimeSpent" value="14251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10498409" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
@@ -531,7 +354,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03579176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -580,7 +403,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#257#306#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,34 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="230" column="16" lean-forward="false" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="16" />
-          <folding>
-            <marker date="1479798880224" expanded="true" signature="11765:12174" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/template/Search.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -645,10 +442,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/template/Search.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#257#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="230" column="16" lean-forward="false" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="16" />
+          <folding>
+            <marker date="1479798880224" expanded="true" signature="11765:12174" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/template/Audio.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding />
         </state>
       </provider>
