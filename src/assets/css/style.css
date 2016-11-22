@@ -565,3 +565,103 @@ textarea {
   font-size: 12px;
   color: #949AA2;
 }
+.audio-warp {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: relative;
+}
+.audio-warp .audio-box {
+  height: 60vh;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+.audio-warp .audio-box .audio-box-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.audio-warp .audio-box .audio-box-img img {
+  width: 100%;
+}
+.audio-warp .audio-box-bg {
+  -webkit-filter: blur(50px);
+  /* Chrome, Opera */
+  -moz-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.audio-warp .audio-nav {
+  position: relative;
+  z-index: 10;
+  height: 40vh;
+  padding: 0 15px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.audio-warp .audio-nav .audio-nav-btn {
+  padding: 0 30px;
+  /* IE 9 */
+  /* Safari and Chrome */
+  -o-flex: 1;
+  /* Opera */
+  -moz-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.recommended-warp {
+  background: #fff;
+  margin-top: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px;
+}
+.recommended-warp .recommended-title {
+  margin-left: 10px;
+  color: #323242;
+}
+.recommended-warp .recommended-more {
+  font-size: 12px;
+  color: #949AA2;
+}
+.gxs-cell {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.gxs-cell .gxs-cell-bd {
+  /* IE 9 */
+  /* Safari and Chrome */
+  -o-flex: 1;
+  /* Opera */
+  -moz-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.gxs-cell .gxs-cell-ft {
+  text-align: right;
+}

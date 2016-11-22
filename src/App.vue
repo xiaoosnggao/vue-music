@@ -4,22 +4,22 @@
       <search></search>
     </div>
     <div class="gxs-body">
-      <audioBox></audioBox>
+      <recommended></recommended>
     </div>
     <div class="gxs-footer"></div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Search from './components/template/Search'
-  import AudioBox from './components/template/Audio'
+  import Search from './components/Search'
+  import Recommended from './components/Recommended'
 
   export default {
     data () {
       return {}
     },
     components: {
-      Search, AudioBox
+      Search, Recommended
     },
     methods: {},
     computed: {
