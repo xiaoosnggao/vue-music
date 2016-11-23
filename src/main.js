@@ -19,6 +19,7 @@ const store = new Vuex.Store({
   state: {
     isRecommendedShow: true,
     isAudioShow: false,
+    isCount: false,
     playing: true,
     currentTime: 0,
     duration: 0,
@@ -47,10 +48,10 @@ const store = new Vuex.Store({
     tabs (state, is) {
       state.isRecommendedShow = is.isRecommendedShow
       state.isAudioShow = is.isAudioShow
+      state.isCount = is.isCount
     },
     setCountList (state, countList) {
       state.count = countList.list
-      console.log(state.count)
     }
   }
 })

@@ -736,6 +736,7 @@ textarea {
   flex-direction: row;
   border-top: 1px solid #e5e5e5;
   align-items: center;
+  background: #fff;
 }
 .gxs-footer .audio-nav .audio-img {
   width: 44px;
@@ -875,6 +876,17 @@ textarea {
 }
 .gxs-cell .gxs-cell-ft {
   text-align: right;
+}
+.count-warp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+  padding-bottom: 10px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
 }
 .count-warp .count-box {
   padding: 10px 15px;

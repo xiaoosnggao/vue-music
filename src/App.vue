@@ -4,13 +4,13 @@
       <search></search>
     </div>
     <div class="gxs-body">
-      <count></count>
       <recommended v-bind:top="topList" v-show="isRecommendedShow"></recommended>
       <transition name="fade">
         <audioBox v-show="isAudioShow"></audioBox>
       </transition>
-      <!--<transition name="fade">-->
-      <!--</transition>-->
+      <transition name="fade">
+        <count v-show="isCount"></count>
+      </transition>
     </div>
     <div class="gxs-footer">
       <audio-nav></audio-nav>
@@ -57,6 +57,9 @@
     },
     computed: {
       ...mapState({
+        isCount (state) {
+          return state.isCount
+        },
         isAudioShow (state) {
           return state.isAudioShow
         },

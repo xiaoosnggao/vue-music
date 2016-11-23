@@ -35,6 +35,9 @@
     },
     methods: {
       play (id) {
+        this.$store.commit('tabs', {
+          isCount: true
+        })
         this.$http.jsonp('https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg', {
           params: {
             topid: id,
