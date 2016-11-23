@@ -1,5 +1,5 @@
-@charset "utf-8";
-//字体样式与颜色
+//out:  style.css
+@charset "utf-8"; //字体样式与颜色
 //（默认样式）Default
 @default: #61676F;
 @text-default: @default; //（首选项）Primary
@@ -323,7 +323,6 @@ body {
 .gxs-vh {
   position: relative;
   .flex(1);
-  padding-bottom: 20px;
   background: @minVhBackground;
   .flex-direction(column);
   .display-flex;
@@ -508,7 +507,6 @@ h6 {
 @inputBackground: #fff;
 @inputBorderColor: #ccc;
 @inputBorderRadius: 5px; //居中样式
-
 /* form gxs-btn input Star*/
 button {
   overflow: visible;
@@ -786,13 +784,15 @@ textarea {
 }
 
 .filter(@num) {
-  -webkit-filter: blur(@num); /* Chrome, Opera */
+  -webkit-filter: blur(@num);
+  /* Chrome, Opera */
   -moz-filter: blur(@num);
   -ms-filter: blur(@num);
   filter: blur(@num);
 }
 
 .gxs-header {
+  height: 44px;
 }
 
 .gxs-body {
@@ -802,7 +802,6 @@ textarea {
 }
 
 .gxs-footer {
-
 }
 
 .search {
@@ -812,11 +811,14 @@ textarea {
   align-items: center;
   background: #fff;
   border-bottom: 1px solid @borderColor;
+
   .search-icon {
     padding: 0 10px;
   }
+
   .search-input {
     .flex(1);
+
     .gxs-input {
       border-color: @borderColor;
       padding: 5px 10px;
@@ -825,35 +827,46 @@ textarea {
       width: 100%;
     }
   }
+
   .search-button {
     padding: 0 10px;
   }
 }
 
 .search-res {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #fff;
+
   .search-res-box {
     .display-flex;
     flex-direction: row;
     padding: 10px;
     border-bottom: 1px solid @borderColor;
+
     .search-res-img {
       width: 32px;
       height: 32px;
+
       img {
         width: 100%;
         height: 100%;
       }
     }
+
     .search-res-text {
       .flex(1);
-      padding-left: 10px;
+
       .search-res-name {
         font-size: 16px;
         color: @titleColor;
       }
+
       .search-res-singer {
-        font-size: 12px;
+        font-size: 16px;
         color: @headColor;
       }
     }
@@ -861,26 +874,86 @@ textarea {
 }
 
 .audio-warp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   .display-flex;
   flex-direction: column;
-  position: relative;
+  z-index: 999;
+  background: #000;
+  overflow: hidden;
+
   .audio-box {
-    height: 60vh;
+    height: 80vh;
     position: relative;
     z-index: 10;
     .display-flex;
     justify-content: center;
     align-items: center;
-    .audio-box-img {
-      width: 180px;
-      height: 180px;
+
+    .audio-head {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5px;
+      padding-right: 30px;
+      padding-bottom: 5px;
+      .display-flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #b1b1b1;
+    }
+
+    .audio-bank {
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       overflow: hidden;
+      .display-flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    .audio-title {
+      .flex(1);
+      .display-flex;
+      justify-content: center;
+      -webkit-overflow-scrolling: touch;
+      overflow: scroll;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .song-name {
+        color: #fff;
+      }
+
+      .singer-name {
+        margin-left: 5px;
+        color: #fff;
+      }
+    }
+
+    .audio-box-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 44px;
+      border: 8px solid #000;
+      box-shadow: 0 0 10px 0 #000;
+
       img {
         width: 100%;
       }
     }
   }
+
   .audio-box-bg {
     .filter(50px);
     position: absolute;
@@ -892,49 +965,233 @@ textarea {
     background-repeat: no-repeat;
     z-index: 0;
   }
+
   .audio-nav {
     position: relative;
     z-index: 10;
-    height: 40vh;
-    padding: 0 15px;
+    height: 20vh;
+    padding: 0 30px;
     .display-flex;
-    justify-content: space-between;
-    align-items: center;
-    .audio-nav-btn {
-      padding: 0 30px;
-      .flex(1);
+    flex-direction: column;
+    .audio-progress {
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, .5);
+      overflow: hidden;
+
+      .audio-progress-box {
+        width: 10px;
+        height: 4px;
+        background: #fff;
+      }
+    }
+
+    i {
+      font-weight: 100;
+      color: #fff;
+    }
+
+    .audio-nav-button {
       .display-flex;
       justify-content: space-between;
+      align-items: center;
+    }
+
+    .audio-nav-btn {
+      width: 150px;
+      .display-flex;
+      justify-content: space-between;
+    }
+
+    .audio-progress-warp {
+      width: 100%;
+      .display-flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .audio-progress-text {
+        margin-top: 5px;
+        width: 100%;
+        .display-flex;
+        justify-content: space-between;
+
+        p {
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.gxs-footer {
+  .audio-nav {
+    position: relative;
+    z-index: 10;
+    height: 44px;
+    .display-flex;
+    flex-direction: row;
+    border-top: 1px solid @borderColor;
+    align-items: center;
+    .audio-img {
+      width: 44px;
+      height: 44px;
+      img {
+        width: 100%;
+      }
+    }
+    .audio-name {
+      .flex(1);
+      padding-left: 10px;
+      overflow: hidden;
+      p {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .audio-nav-button {
+      width: 140px;
+      .display-flex;
+      justify-content: space-around;
+      align-items: center;
+      i {
+        font-size: 24px;
+      }
     }
   }
 }
 
 .recommended-warp {
-  background: #fff;
   margin-top: 10px;
-  border-top: 1px solid @borderColor;
-  border-bottom: 1px solid @borderColor;
-  padding: 15px;
-  .recommended-title{
+
+  .recommended-title {
     margin-left: 10px;
     color: @titleColor;
   }
-  .recommended-more{
+
+  .recommended-hd {
+    padding: 10px 15px;
+  }
+
+  .recommended-more {
     font-size: 12px;
     color: @headColor;
+  }
+
+  .recommended-bd {
+    .display-flex;
+    flex-direction: column;
+    padding: 0 10px;
+
+    .audio-item {
+      margin-bottom: 10px;
+      width: 100%;
+      .display-flex;
+      border: 1px solid @borderColor;
+      background: #fff;
+      .border-radius(5px);
+      overflow: hidden;
+
+      .topList-img {
+        width: 80px;
+      }
+
+      .recommended-box-img {
+        width: 80px;
+        height: 80px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .recommended-box-text {
+        .recommended-box-title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .topList-list {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .recommended-box {
+    border-bottom: 1px solid @borderColor;
+    padding: 5px 10px;
+    .display-flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    &:last-child {
+      border: 0;
+    }
+
+    .recommended-index {
+      font-size: 14px;
+      color: @default;
+      padding-right: 10px;
+    }
+
+    .recommended-info {
+      width: 100%;
+      font-size: 12px;
+      color: @titleColor;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .album-name {
+      margin-left: 5px;
+      font-size: 12px;
+      color: @headColor;
+    }
   }
 }
 
 .gxs-cell {
   .display-flex;
   align-items: center;
-  .gxs-cell-hd {
 
+  .gxs-cell-hd {
   }
+
   .gxs-cell-bd {
     .flex(1)
   }
+
   .gxs-cell-ft {
     text-align: right;
+  }
+}
+
+.count-warp {
+  .count-box {
+    padding: 10px 15px;
+    .display-flex;
+    border-bottom: 1px solid @borderColor;
+    align-items: center;
+    .count-box-index {
+      font-size: 14px;
+      color: @titleColor;
+      padding-right: 10px;
+    }
+    .count-box-title {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: @titleColor;
+    }
+    .count-box-name {
+      font-size: 12px;
+      color: @headColor;
+    }
   }
 }

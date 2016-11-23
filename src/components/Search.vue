@@ -12,13 +12,9 @@
       </div>
     </div>
     <div class="search-res" v-if="isSearch">
-      <div class="search-res-box" v-for="(item,index) in searchRes.album.itemlist" v-on:click="play(index)">
-        <div class="search-res-img">
-          <img v-bind:src="item.pic" alt="">
-        </div>
+      <div class="search-res-box" v-for="(item,index) in searchRes.song.itemlist" v-on:click="play(index)">
         <div class="search-res-text">
-          <div class="search-res-name">{{item.name}}</div>
-          <div class="search-res-singer">{{item.singer}}</div>
+          <div class="search-res-name">{{item.name}}<span class="search-res-singer"> - {{item.singer}}</span></div>
         </div>
       </div>
     </div>
@@ -53,17 +49,15 @@
           jsonp: 'jsonpCallback'
         }).then((response) => {
           this.searchRes = response.data.data
-          console.log(this.searchRes)
           this.isSearch = true
         })
       },
-      play: function (index) {
-        console.log(this.$store.state.dataUrl)
+      play (index) {
+        this.isSearch = false
         this.$store.commit('setPlayList', {
           index: index,
           list: this.searchRes.song.itemlist
         })
-        console.log(this.$store.state.dataUrl)
       }
     },
     mounted () {
