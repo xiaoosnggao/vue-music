@@ -37,7 +37,8 @@ const store = new Vuex.Store({
       name: '告白气球',
       singer: '周杰伦'
     }],
-    count: []
+    count: [],
+    countlist: []
   },
   mutations: {
     setPlayList (state, playList) {
@@ -45,13 +46,18 @@ const store = new Vuex.Store({
       state.index = playList.index
       state.song = state.playList[state.index]
     },
-    tabs (state, is) {
-      state.isRecommendedShow = is.isRecommendedShow
-      state.isAudioShow = is.isAudioShow
+    isCount (state, is) {
       state.isCount = is.isCount
+    },
+    isRecommendedShow (state, is) {
+      state.isRecommendedShow = is.isRecommendedShow
+    },
+    isAudioShow (state, is) {
+      state.isAudioShow = is.isAudioShow
     },
     setCountList (state, countList) {
       state.count = countList.list
+      state.countlist = countList.countlist
     }
   }
 })

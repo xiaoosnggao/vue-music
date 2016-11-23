@@ -11,6 +11,7 @@
       </div>
       <audio id="music" v-bind:src="dataUrl" autoplay="autoplay"></audio>
       <div class="audio-box-img">
+        <div class="audio-box-img-after"></div>
         <img v-bind:src="coverImgUrl" alt="">
       </div>
     </div>
@@ -58,8 +59,7 @@
     },
     methods: {
       bank () {
-        this.$store.commit('tabs', {
-          isRecommendedShow: true,
+        this.$store.commit('isAudioShow', {
           isAudioShow: false
         })
       }

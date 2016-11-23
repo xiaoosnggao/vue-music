@@ -33,9 +33,7 @@
     },
     methods: {
       showAudio () {
-        console.log(1)
-        this.$store.commit('tabs', {
-          isRecommendedShow: false,
+        this.$store.commit('isAudioShow', {
           isAudioShow: true
         })
       }

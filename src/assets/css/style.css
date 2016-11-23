@@ -593,69 +593,35 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.audio-warp .audio-box .audio-head {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 5px;
-  padding-right: 30px;
-  padding-bottom: 5px;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #b1b1b1;
-}
-.audio-warp .audio-box .audio-bank {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
-}
-.audio-warp .audio-box .audio-bank i {
-  color: #fff;
-}
-.audio-warp .audio-box .audio-title {
-  /* IE 9 */
-  /* Safari and Chrome */
-  -o-flex: 1;
-  /* Opera */
-  -moz-flex: 1;
-  /* Firefox */
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.audio-warp .audio-box .audio-title .song-name {
-  color: #fff;
-}
-.audio-warp .audio-box .audio-title .singer-name {
-  margin-left: 5px;
-  color: #fff;
-}
 .audio-warp .audio-box .audio-box-img {
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+  margin-top: 44px;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px 0 #000;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+.audio-warp .audio-box .audio-box-img .audio-box-img-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 235px;
+  height: 235px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.audio-warp .audio-box .audio-box-img img {
+  margin-left: 10px;
+  margin-top: 10px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  margin-top: 44px;
-  border: 8px solid #000;
-  box-shadow: 0 0 10px 0 #000;
-}
-.audio-warp .audio-box .audio-box-img img {
-  width: 100%;
+  position: relative;
+  z-index: 99;
 }
 .audio-warp .audio-box-bg {
   -webkit-filter: blur(50px);
@@ -726,6 +692,58 @@ textarea {
 .audio-warp .audio-nav .audio-progress-warp .audio-progress-text p {
   color: #fff;
   font-size: 12px;
+}
+.audio-head {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b1b1b1;
+}
+.audio-head .audio-bank {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+.audio-head .audio-bank i {
+  color: #fff;
+}
+.audio-head .audio-title {
+  /* IE 9 */
+  /* Safari and Chrome */
+  -o-flex: 1;
+  /* Opera */
+  -moz-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.audio-head .audio-title .song-name {
+  color: #fff;
+}
+.audio-head .audio-title .singer-name {
+  margin-left: 5px;
+  color: #fff;
 }
 .gxs-footer .audio-nav {
   position: relative;
@@ -883,6 +901,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 44px;
+  padding-top: 44px;
   padding-bottom: 10px;
   background: #fff;
   -webkit-overflow-scrolling: touch;
@@ -908,4 +927,13 @@ textarea {
 .count-warp .count-box .count-box-name {
   font-size: 12px;
   color: #949AA2;
+}
+.count-head {
+  border-bottom: 1px solid #e5e5e5;
+}
+.count-head .audio-bank i {
+  color: #323242;
+}
+.count-head .audio-title .song-name {
+  color: #323242;
 }

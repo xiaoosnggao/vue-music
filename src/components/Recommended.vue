@@ -35,9 +35,6 @@
     },
     methods: {
       play (id) {
-        this.$store.commit('tabs', {
-          isCount: true
-        })
         this.$http.jsonp('https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg', {
           params: {
             topid: id,
@@ -52,7 +49,11 @@
         }).then((response) => {
           this.list = response.data.songlist
           this.$store.commit('setCountList', {
-            list: this.list
+            list: this.list,
+            countlist: response.data
+          })
+          this.$store.commit('isCount', {
+            isCount: true
           })
         })
       }

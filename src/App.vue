@@ -29,7 +29,10 @@
   export default {
     data () {
       return {
-        topList: null
+        topList: null,
+        isCount: false,
+        isAudioShow: false,
+        isRecommendedShow: false
       }
     },
     props: ['top'],
@@ -77,7 +80,7 @@
 <style>
   .fade-enter-active, .fade-leave-active {
     transform: translate(0px, 0px);
-    transition: all .5s;
+    transition: all .3s;
   }
 
   .fade-enter, .fade-leave-active {

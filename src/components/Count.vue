@@ -1,5 +1,11 @@
 <template>
   <div class="count-warp">
+    <div class="audio-head count-head ">
+      <div class="audio-bank" v-on:click="bank()">
+        <i class="icon-chevron-left"></i>
+      </div>
+      <div class="audio-title"><p class="song-name">{{countListName}}</p></div>
+    </div>
     <div class="count-box" v-for="(item,index) in count" v-on:click="play(index)">
       <div class="count-box-index">{{index+1}}</div>
       <div class="count-box-info">
@@ -14,7 +20,9 @@
   export default {
     name: 'Search',
     data () {
-      return {}
+      return {
+        countListName: this.$store.state.countlist.topinfo.ListName
+      }
     },
     computed: {
       ...mapState([
@@ -26,6 +34,15 @@
         this.$store.commit('setPlayList', {
           index: index,
           list: this.$store.state.count
+        })
+        this.bank()
+        this.$store.commit('isAudioShow', {
+          isAudioShow: true
+        })
+      },
+      bank () {
+        this.$store.commit('isCount', {
+          isCount: false
         })
       }
     },
