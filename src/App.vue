@@ -6,14 +6,14 @@
     <div class="gxs-body">
       <recommended v-bind:top="topList" v-show="isRecommendedShow"></recommended>
       <transition name="fade">
-        <audioBox v-show="isAudioShow"></audioBox>
+        <audio-box v-show="isAudioShow"></audio-box>
       </transition>
       <transition name="fade">
-        <count v-show="isCount"></count>
+        <count v-if="isCount"></count>
       </transition>
     </div>
     <div class="gxs-footer">
-      <audio-nav></audio-nav>
+      <audio-nav v-on:play="tapButton()"></audio-nav>
     </div>
   </div>
 </template>
@@ -32,14 +32,27 @@
         topList: null,
         isCount: false,
         isAudioShow: false,
-        isRecommendedShow: false
+        isRecommendedShow: true
       }
     },
     props: ['top'],
     components: {
       Search, Recommended, AudioBox, AudioNav, Count
     },
-    methods: {},
+    methods: {
+      ...mapMutations([
+        'play', 'pause', 'playContinue'
+      ]),
+      tapButton () {
+        if (!this.playing) {
+          this.play()
+          document.getElementById('music').play()
+        } else {
+          this.pause()
+          document.getElementById('music').pause()
+        }
+      }
+    },
     mounted () {
       this.$http.jsonp('http://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg', {
         params: {
@@ -54,25 +67,26 @@
           _: new Date().getTime()
         },
         jsonp: 'jsonpCallback'
-      }).then((response) => {
+      }).then(function (response) {
         this.topList = response.data.data.topList
       })
     },
     computed: {
-      ...mapState({
-        isCount (state) {
-          return state.isCount
-        },
-        isAudioShow (state) {
-          return state.isAudioShow
-        },
-        isRecommendedShow (state) {
-          return state.isRecommendedShow
-        }
-      }),
-      ...mapMutations([
-        'play', 'pause', 'playContinue'
+      ...mapState([
+        'playing', 'song', 'coverImgUrl'
       ])
+    },
+    watch: {
+      song (song) {
+        this.$http.jsonp('http://120.27.93.97/weappserver/get_music_image.php', {
+          params: {
+            mid: song.mid
+          },
+          jsonp: 'callback'
+        }).then(function (response) {
+          this.$store.state['coverImgUrl'] = response.data.url
+        })
+      }
     }
   }
 </script>

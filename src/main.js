@@ -17,12 +17,10 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    isRecommendedShow: true,
-    isAudioShow: false,
-    isCount: false,
     playing: true,
     currentTime: 0,
     duration: 0,
+    playMode: 1,
     index: 0,
     coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg?max_age=2592000',
     song: {
@@ -42,9 +40,18 @@ const store = new Vuex.Store({
   },
   mutations: {
     setPlayList (state, playList) {
-      state.playList = playList.list
       state.index = playList.index
-      state.song = state.playList[state.index]
+      if (playList.list[playList.index].data) {
+        state.playList.push({
+          'id': playList.list[state.index].data.songid,
+          'mid': playList.list[state.index].data.songmid,
+          'name': playList.list[state.index].data.songname,
+          'singer': playList.list[state.index].data.singer[0].name
+        })
+      } else {
+        state.playList.push(playList.list[state.index])
+      }
+      state.song = state.playList[state.playList.length - 1]
     },
     isCount (state, is) {
       state.isCount = is.isCount
@@ -58,6 +65,55 @@ const store = new Vuex.Store({
     setCountList (state, countList) {
       state.count = countList.list
       state.countlist = countList.countlist
+    },
+    addToPlayList (state, item) {
+      state.playList.push(item.list)
+      console.log(state.playList)
+    },
+    updateDuration (state, time) {
+      state.duration = time
+    },
+    updateCurrentTime (state, time) {
+      state.currentTime = time
+    },
+    play (state) {
+      state.playing = true
+    },
+    pause (state) {
+      state.playing = false
+    },
+    playFront (state) {
+      state.index = (state.index - 1 + state.playList.length) % state.playList.length
+      state.song = state.playList[state.index]
+    },
+    playNext (state) {
+      state.index = (state.index + 1) % state.playList.length
+      state.song = state.playList[state.index]
+    },
+    playContinue (state) {
+      switch (state.playMode) {
+        case 1:
+          break
+        case 2:
+          state.index = (state.index + 1) % state.playList.length
+          state.song = state.playList[state.index]
+          break
+        case 3:
+          state.index = Math.floor(Math.random() * state.playList.length)
+          state.song = state.playList[state.index]
+          break
+      }
+    },
+    changePlayMode (state) {
+      state.playMode = (state.playMode + 1) % 3
+    }
+  },
+  getters: {
+    currentTime: state => {
+      return parseInt(state.currentTime / 60) + ':' + (Array(2).join(0) + (state.currentTime % 60)).slice(-2)
+    },
+    duration: state => {
+      return parseInt(state.duration / 60) + ':' + (Array(2).join(0) + (state.duration % 60)).slice(-2)
     }
   }
 })

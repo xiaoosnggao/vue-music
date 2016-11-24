@@ -4,26 +4,26 @@
       <img v-bind:src="coverImgUrl" alt="">
     </div>
     <div class="audio-name">
-      <p>{{songName}}</p>
+      <p>{{song.name}} - {{song.singer}}</p>
     </div>
     <div class="audio-nav-button">
-      <i class="audio-l icon-step-backward icon-2x"></i>
-      <i class="audio-c icon-pause icon-2x"></i>
-      <i class="audio-r icon-step-forward icon-2x"></i>
+      <i class="audio-l icon-step-backward icon-2x" v-on:click="playFront"></i>
+      <i class="audio-c icon-2x" v-bind:class="!playing?PlayClass:pauseClass" v-on:click="$parent.tapButton"></i>
+      <i class="audio-r icon-step-forward icon-2x" v-on:click="playNext"></i>
     </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-  import {mapState} from 'vuex'
+  import {mapMutations, mapState} from 'vuex'
   export default {
     name: 'Search',
     data () {
       return {
         isMid: null,
         isId: null,
-        songName: this.$store.state.song.name,
-        singerName: null,
-        coverImgUrl: null
+        coverImgUrl: null,
+        pauseClass: 'icon-pause',
+        PlayClass: 'icon-play'
       }
     },
     computed: {
@@ -32,23 +32,11 @@
       ])
     },
     methods: {
+      ...mapMutations([
+        'playNext', 'playFront'
+      ]),
       showAudio () {
-        this.$store.commit('isAudioShow', {
-          isAudioShow: true
-        })
-      }
-    },
-    watch: {
-      song (song) {
-        if (typeof song.mid === 'undefined') {
-          this.isMid = song.data.strMediaMid
-          this.singerName = song.data.singer[0].name
-          this.songName = song.data.songname
-        } else {
-          this.isMid = song.mid
-          this.singerName = song.singer
-          this.songName = song.name
-        }
+        this.$parent.isAudioShow = true
       }
     }
   }

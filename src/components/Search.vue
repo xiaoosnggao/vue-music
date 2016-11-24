@@ -1,9 +1,6 @@
 <template>
   <div class="search-warp">
     <div class="search">
-      <div class="search-icon">
-        <i class=" icon-reorder"></i>
-      </div>
       <div class="search-input">
         <input class="gxs-input" type="text" v-model="searchInfo">
       </div>
@@ -54,6 +51,7 @@
       },
       play (index) {
         this.isSearch = false
+        this.$parent.isAudioShow = true
         this.$store.commit('setPlayList', {
           index: index,
           list: this.searchRes.song.itemlist

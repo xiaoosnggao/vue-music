@@ -478,6 +478,16 @@ textarea {
   color: #323242 !important;
   font-size: 28px;
 }
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.touch {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
 .gxs-header {
   height: 44px;
 }
@@ -493,7 +503,7 @@ textarea {
   -ms-flex: 1;
   flex: 1;
   -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .search {
   height: 44px;
@@ -502,8 +512,6 @@ textarea {
   align-items: center;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
-}
-.search .search-icon {
   padding: 0 10px;
 }
 .search .search-input {
@@ -526,7 +534,7 @@ textarea {
   width: 100%;
 }
 .search .search-button {
-  padding: 0 10px;
+  padding-left: 10px;
 }
 .search-res {
   position: absolute;
@@ -658,6 +666,11 @@ textarea {
   width: 10px;
   height: 4px;
   background: #fff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .audio-warp .audio-nav i {
   font-weight: 100;
@@ -694,11 +707,13 @@ textarea {
   font-size: 12px;
 }
 .audio-head {
-  position: absolute;
+  height: 44px;
+  position: fixed;
   left: 0;
   right: 0;
-  top: 5px;
+  top: 0;
   padding-right: 30px;
+  padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
   display: -webkit-flex;
@@ -734,12 +749,16 @@ textarea {
   display: -webkit-flex;
   justify-content: center;
   -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  overflow-y: scroll;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .audio-head .audio-title .song-name {
   color: #fff;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .audio-head .audio-title .singer-name {
   margin-left: 5px;
@@ -900,12 +919,20 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 44px;
-  padding-top: 44px;
+  bottom: 0;
+  padding-bottom: 44px;
+  background: #fff;
+}
+.count-warp .count-touch {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding-bottom: 10px;
   background: #fff;
   -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .count-warp .count-box {
   padding: 10px 15px;
@@ -928,12 +955,121 @@ textarea {
   font-size: 12px;
   color: #949AA2;
 }
+.count-warp .count-box .count-box-info {
+  /* IE 9 */
+  /* Safari and Chrome */
+  -o-flex: 1;
+  /* Opera */
+  -moz-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.count-warp .count-box .count-box-button {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.count-warp .count-box .count-box-button i {
+  color: #949AA2;
+}
 .count-head {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   border-bottom: 1px solid #e5e5e5;
+  background: #fff;
 }
 .count-head .audio-bank i {
   color: #323242;
 }
+.count-head .audio-title {
+  overflow: hidden;
+}
 .count-head .audio-title .song-name {
   color: #323242;
+}
+.list-warp {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+}
+.list-warp .list-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.list-warp .list {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #fff;
+}
+.list-warp .list .list-box {
+  border-top: 1px solid #e5e5e5;
+  padding: 12px;
+  text-align: center;
+}
+.list-warp .list .list-box.list-box-audio {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.list-warp .list .list-box.list-box-audio .audio-singerName {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #949AA2;
+}
+.list-warp .list .list-box .audio-img {
+  width: 40px;
+  margin-right: 10px;
+}
+.list-warp .list .list-box .audio-img img {
+  width: 100%;
+}
+.play-list-warp {
+  align-items: flex-start;
+  background: none;
+}
+.play-list-warp .audio-head {
+  z-index: 6;
+}
+.play-list-warp .play-list {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+.play-list-warp .play-list .list-box {
+  text-align: left;
+}
+.play-list-warp .play-list .play-list-index {
+  color: #949AA2;
+}
+.play-list-warp .play-list .play-list-name {
+  color: #323242;
+}
+.play-list-warp .play-list .play-list-singer {
+  color: #61676F;
 }

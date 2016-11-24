@@ -46,15 +46,13 @@
             needNewCode: 0
           },
           jsonp: 'jsonpCallback'
-        }).then((response) => {
+        }).then(function (response) {
           this.list = response.data.songlist
           this.$store.commit('setCountList', {
             list: this.list,
             countlist: response.data
           })
-          this.$store.commit('isCount', {
-            isCount: true
-          })
+          this.$parent.isCount = true
         })
       }
     }
