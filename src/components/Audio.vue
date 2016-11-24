@@ -28,7 +28,7 @@
       </div>
       <div class="audio-nav-button">
         <div class="audio-play-order">
-          <i class="" v-bind:class="getPlayModeClass" v-on:click="changePlayMode"></i>
+          <i v-bind:class="getPlayModeClass" v-on:click="changePlayMode"></i>
         </div>
         <div class="audio-nav-btn">
           <i class="audio-l icon-step-backward icon-2x" v-on:click="playFront"></i>
@@ -74,9 +74,6 @@
         this.$store.commit('updateCurrentTime', parseInt(document.getElementById('music').currentTime))
         this.$store.commit('updateDuration', parseInt(document.getElementById('music').duration))
       },
-      playContinue () {
-        console.log(1)
-      },
       clonePlayList () {
         this.isPlayList = false
       },
@@ -84,11 +81,11 @@
         this.isPlayList = true
       },
       ...mapMutations([
-        'playNext', 'playFront', 'changePlayMode'
+        'playNext', 'playFront', 'changePlayMode', 'playContinue'
       ])
     },
     computed: {
-      getPlayModeClass: function () {
+      getPlayModeClass () {
         let playModeClass = ''
         if (this.playMode === 1) {
           playModeClass = 'icon-retweet'

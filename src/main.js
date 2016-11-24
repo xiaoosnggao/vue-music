@@ -20,20 +20,20 @@ const store = new Vuex.Store({
     playing: true,
     currentTime: 0,
     duration: 0,
-    playMode: 1,
+    playMode: 2,
     index: 0,
     coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003RMaRI1iFoYd.jpg?max_age=2592000',
     song: {
-      id: '107192078',
-      mid: '003OUlho2HcRHC',
-      name: '告白气球',
-      singer: '周杰伦'
+      id: '102636799',
+      mid: '001Qu4I30eVFYb',
+      name: '演员',
+      singer: '薛之谦'
     },
     playList: [{
-      id: '107192078',
-      mid: '003OUlho2HcRHC',
-      name: '告白气球',
-      singer: '周杰伦'
+      id: '102636799',
+      mid: '001Qu4I30eVFYb',
+      name: '演员',
+      singer: '薛之谦'
     }],
     count: [],
     countlist: []
@@ -91,6 +91,7 @@ const store = new Vuex.Store({
       state.song = state.playList[state.index]
     },
     playContinue (state) {
+      console.log(state.playMode)
       switch (state.playMode) {
         case 1:
           break
