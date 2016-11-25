@@ -78,7 +78,6 @@
     },
     watch: {
       song (song) {
-        console.log(song)
         this.$http.jsonp('http://120.27.93.97/weappserver/get_music_image.php', {
           params: {
             mid: song.mid

@@ -19,7 +19,7 @@
       </div>
     </div>
     <transition name="fade">
-      <list-meng v-if="isListMeng" v-bind:ListMeng="isListMeng" v-bind:coIndex="countIndex" v-on:cloneListMeng="cloneListMeng"></list-meng>
+      <list-meng v-if="isListMeng" v-bind:ListMeng="isListMeng" v-bind:coIndex="countIndex"></list-meng>
     </transition>
   </div>
 </template>
@@ -45,6 +45,7 @@
     },
     methods: {
       play (index) {
+        this.$store.state['playing'] = true
         this.$store.commit('setPlayList', {
           index: index,
           list: this.count
@@ -58,9 +59,6 @@
       list (index) {
         this.isListMeng = true
         this.countIndex = this.count[index].data
-      },
-      cloneListMeng () {
-        this.isListMeng = false
       }
     }
   }
