@@ -323,7 +323,7 @@ body {
 .gxs-vh {
   position: relative;
   .flex(1);
-  background: @minVhBackground;
+  background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
   .flex-direction(column);
   .display-flex;
   min-height: 100vh;
@@ -820,12 +820,10 @@ textarea {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #fff;
-  border-bottom: 1px solid @borderColor;
+  background: none;
   padding: 0 10px;
   .search-input {
     .flex(1);
-
     .gxs-input {
       border-color: @borderColor;
       padding: 5px 10px;
