@@ -10,7 +10,7 @@
           <p class="song-name">{{song.name}} <span class="singer-name">{{song.singer}}</span></p>
         </div>
       </div>
-      <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinue" autoplay="autoplay"></audio>
+      <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinue" autoplay="autoplay" v-bind:loop="isLoop"></audio>
       <div class="audio-box-img">
         <div class="audio-box-img-after"></div>
         <img v-bind:src="coverImgUrl" alt="">
@@ -18,8 +18,10 @@
     </div>
     <div class="audio-nav">
       <div class="audio-progress-warp">
-        <div class="audio-progress">
-          <div class="audio-progress-box" v-bind:style="{width:indicatorPosition+'%'}"></div>
+        <div class="audio-progress" v-on:click="touchSit($event)">
+          <div class="audio-progress-box" v-bind:style="{width:indicatorPosition+'%'}">
+            <div class="audio-progress-touch"></div>
+          </div>
         </div>
         <div class="audio-progress-text">
           <p>{{currentTime}}</p>
@@ -80,6 +82,11 @@
       showPlayList () {
         this.isPlayList = true
       },
+      touchSit (event) {
+        document.getElementById('music').currentTime = parseInt(document.getElementById('music').duration) * ((event.pageX - 25) / event.toElement.clientWidth)
+        this.$store.commit('updateCurrentTime', parseInt(document.getElementById('music').duration) * ((event.pageX - 25) / event.toElement.clientWidth))
+        event.preventDefault()
+      },
       ...mapMutations([
         'playNext', 'playFront', 'changePlayMode', 'playContinue'
       ])
@@ -110,7 +117,7 @@
         'currentTime', 'duration'
       ]),
       ...mapState([
-        'playing', 'song', 'coverImgUrl', 'playList', 'playMode'
+        'playing', 'song', 'coverImgUrl', 'playList', 'playMode', 'isLoop'
       ]),
       ...mapState({
         indicatorPosition (state) {
@@ -118,9 +125,7 @@
         }
       })
     },
-    watch: {
-
-    }
+    watch: {}
   }
 </script>
 <style type="text/css">

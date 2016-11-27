@@ -606,7 +606,7 @@ textarea {
   border-radius: 50%;
   margin-top: 44px;
   border: 8px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 10px 0 #000;
+  box-shadow: 0 0 10px 0 #757575;
   position: relative;
   overflow: hidden;
   z-index: 10;
@@ -657,9 +657,8 @@ textarea {
 .audio-warp .audio-nav .audio-progress {
   width: 100%;
   height: 4px;
-  border-radius: 2px;
   background: rgba(255, 255, 255, 0.5);
-  overflow: hidden;
+  border-radius: 2px;
 }
 .audio-warp .audio-nav .audio-progress .audio-progress-box {
   width: 10px;
@@ -670,6 +669,21 @@ textarea {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  border-radius: 2px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  overflow: visible;
+}
+.audio-warp .audio-nav .audio-progress .audio-progress-box .audio-progress-touch {
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  top: -3px;
+  box-shadow: 0 0 5px 0 #7d7d7d;
 }
 .audio-warp .audio-nav i {
   font-weight: 100;
