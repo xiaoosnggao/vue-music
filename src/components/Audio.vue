@@ -1,22 +1,10 @@
 <template>
   <div class="audio-warp">
-    <div class="audio-box-bg" v-bind:style="{backgroundImage: 'url('+ coverImgUrl +')'}"></div>
     <div class="audio-box">
-      <div class="audio-head">
-        <div class="audio-bank" v-on:click="bank()">
-          <i class="icon-chevron-left"></i>
-        </div>
-        <div class="audio-title">
-          <p class="song-name">{{song.name}} <span class="singer-name">{{song.singer}}</span></p>
-        </div>
-      </div>
       <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinue" autoplay="autoplay" v-bind:loop="isLoop"></audio>
       <div class="audio-box-img">
-        <div class="audio-box-img-after"></div>
         <img v-bind:src="coverImgUrl" alt="">
       </div>
-    </div>
-    <div class="audio-nav">
       <div class="audio-progress-warp">
         <div class="audio-progress" v-on:click="touchSit($event)">
           <div class="audio-progress-box" v-bind:style="{width:indicatorPosition+'%'}">
@@ -28,14 +16,21 @@
           <p>{{duration}}</p>
         </div>
       </div>
+    </div>
+    <div class="audio-head">
+      <div class="audio-title">
+        <p class="song-name">{{song.name}} <span class="singer-name">{{song.singer}}</span></p>
+      </div>
+    </div>
+    <div class="audio-nav">
       <div class="audio-nav-button">
         <div class="audio-play-order">
           <i v-bind:class="getPlayModeClass" v-on:click="changePlayMode"></i>
         </div>
         <div class="audio-nav-btn">
-          <i class="audio-l icon-step-backward icon-2x" v-on:click="playFront"></i>
-          <i class="audio-c icon-2x" v-bind:class="!playing?PlayClass:pauseClass" v-on:click="$parent.tapButton"></i>
-          <i class="audio-r icon-step-forward icon-2x" v-on:click="playNext"></i>
+          <i class="audio-l" v-on:click="playFront"><img src="../assets/images/icon-step-backward.png" alt=""></i>
+          <i class="audio-c" v-bind:class="playing ? 'gxs-playClass' : 'gxs-pauseClass'" v-on:click="$parent.tapButton"></i>
+          <i class="audio-r" v-on:click="playNext"><img src="../assets/images/icon-icon-step-forward.png" alt=""></i>
         </div>
         <div class="audio-list">
           <i class="icon-reorder" v-on:click="showPlayList"></i>
@@ -69,9 +64,6 @@
       PlayList
     },
     methods: {
-      bank () {
-        this.$parent.isAudioShow = false
-      },
       updateTime () {
         this.$store.commit('updateCurrentTime', parseInt(document.getElementById('music').currentTime))
         this.$store.commit('updateDuration', parseInt(document.getElementById('music').duration))

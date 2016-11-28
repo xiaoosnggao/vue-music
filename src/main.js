@@ -4,6 +4,7 @@ import vueResource from 'vue-resource'
 import Vuex from 'vuex'
 // 引入静态资源
 require('./assets/css/style.css')
+require('./assets/css/animate.css')
 require('./assets/js/sherd.js')
 require('./assets/Font-Awesome-3.2.1/css/font-awesome.min.css')
 
