@@ -1,28 +1,29 @@
 <template>
-  <div class="gxs-vh">
-    <div class="gxs-header">
-      <search></search>
+    <div class="gxs-vh">
+        <div class="gxs-header">
+            <search></search>
+        </div>
+        <div class="gxs-body">
+            <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated zoomOut" mode="out-in">
+                <audio-box v-show="isAudioShow"></audio-box>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
+                <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight"
+                        mode="out-in">
+                <count v-if="isCount"></count>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+                <search-list v-if="isSearch" v-bind:searchListData="searchRes"></search-list>
+            </transition>
+        </div>
+        <div class="gxs-footer">
+            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+                <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
+            </transition>
+        </div>
     </div>
-    <div class="gxs-body">
-      <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated zoomOut" mode="out-in">
-        <audio-box v-show="isAudioShow"></audio-box>
-      </transition>
-      <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
-        <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
-      </transition>
-      <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight" mode="out-in">
-        <count v-if="isCount"></count>
-      </transition>
-      <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
-        <search-list v-if="isSearch" v-bind:searchListData="searchRes"></search-list>
-      </transition>
-    </div>
-    <div class="gxs-footer">
-      <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
-        <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
-      </transition>
-    </div>
-  </div>
 </template>
 <script type="text/ecmascript-6">
   import Search from './components/Search'
@@ -94,6 +95,7 @@
           },
           jsonp: 'callback'
         }).then(function (response) {
+          console.log(1)
           this.$store.state['coverImgUrl'] = response.data.url
         })
       }
