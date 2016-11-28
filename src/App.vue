@@ -1,29 +1,37 @@
 <template>
-  <div class="gxs-vh">
-    <div class="gxs-header">
-      <search></search>
+    <div class="gxs-vh">
+        <div class="gxs-header">
+            <search></search>
+        </div>
+        <div class="gxs-body">
+            <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated zoomOut" mode="out-in">
+                <audio-box v-show="isAudioShow"></audio-box>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
+                <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight"
+                        mode="out-in">
+                <count v-if="isCount"></count>
+            </transition>
+            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+                <search-list v-if="isSearch" v-bind:searchListData="searchRes"></search-list>
+            </transition>
+        </div>
+        <div class="gxs-footer">
+            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+                <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
+            </transition>
+        </div>
     </div>
-    <div class="gxs-body">
-      <recommended v-bind:top="topList" v-show="isRecommendedShow"></recommended>
-      <transition name="fade">
-        <audio-box v-show="isAudioShow"></audio-box>
-      </transition>
-      <transition name="fade">
-        <count v-if="isCount"></count>
-      </transition>
-    </div>
-    <div class="gxs-footer">
-      <audio-nav v-on:play="tapButton()"></audio-nav>
-    </div>
-  </div>
 </template>
-
 <script type="text/ecmascript-6">
   import Search from './components/Search'
   import Recommended from './components/Recommended'
   import AudioBox from './components/Audio'
   import AudioNav from './components/AudioNav'
   import Count from './components/Count'
+  import SearchList from './components/SearchList.vue'
   import {mapMutations, mapState} from 'vuex'
 
   export default {
@@ -32,12 +40,15 @@
         topList: null,
         isCount: false,
         isAudioShow: false,
-        isRecommendedShow: true
+        isRecommendedShow: true,
+        isAudioNav: true,
+        isSearch: false,
+        searchRes: null
       }
     },
-    props: ['top'],
+    props: ['top', 'searchListData'],
     components: {
-      Search, Recommended, AudioBox, AudioNav, Count
+      Search, Recommended, AudioBox, AudioNav, Count, SearchList
     },
     methods: {
       ...mapMutations([
@@ -84,6 +95,7 @@
           },
           jsonp: 'callback'
         }).then(function (response) {
+          console.log(1)
           this.$store.state['coverImgUrl'] = response.data.url
         })
       }
@@ -92,12 +104,5 @@
 </script>
 
 <style>
-  .fade-enter-active, .fade-leave-active {
-    transform: translate(0px, 0px);
-    transition: all .3s;
-  }
 
-  .fade-enter, .fade-leave-active {
-    transform: translate(100%, 0px);
-  }
 </style>

@@ -1,12 +1,13 @@
 <template>
   <div class="count-warp">
-    <div class="audio-head count-head ">
-      <div class="audio-bank" v-on:click="bank()">
-        <i class="icon-chevron-left"></i>
-      </div>
-      <div class="audio-title"><p class="song-name">{{countlist.topinfo.ListName}}</p></div>
-    </div>
     <div class="count-touch">
+      <div class="count-box-hd">
+        <img v-bind:src="countlist.topinfo.pic_h5" alt="">
+        <div class="count-info">
+          <div class="count-title">{{countlist.topinfo.ListName}}</div>
+          <div class="count-date">{{countlist.date}}</div>
+        </div>
+      </div>
       <div class="count-box" v-for="(item,index) in count">
         <div class="count-box-index">{{index+1}}</div>
         <div class="count-box-info" v-on:click="play(index)">
@@ -52,9 +53,12 @@
         })
         this.bank()
         this.$parent.isAudioShow = true
+        this.$parent.isCount = false
+        this.$parent.isAudioNav = false
       },
       bank () {
         this.$parent.isCount = false
+        this.$parent.isAudioNav = true
       },
       list (index) {
         this.isListMeng = true

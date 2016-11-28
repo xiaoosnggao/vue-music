@@ -1,9 +1,5 @@
 <template>
   <div class="recommended-warp">
-    <div class="recommended-hd gxs-cell">
-      <div class="gxs-cell-hd"><i class="icon-list-alt"></i></div>
-      <div class="gxs-cell-bd recommended-title">推荐歌单</div>
-    </div>
     <div class="recommended-bd">
       <div class="audio-item" v-for="(item, index) in top" v-on:click="play(item.id)">
         <div class="topList-img">
@@ -12,10 +8,15 @@
           </div>
         </div>
         <div class="topList-list">
+          <div class="recommended-title">{{item.topTitle}}</div>
           <div class="recommended-box" v-for="(item, index) in item.songList">
             <p class="recommended-info">
-              {{item.songname}}<span class="album-name">{{item.singername}}</span>
+              <span class="song-index">{{index + 1}}</span><span class="song-name">{{item.songname}}</span><span class="album-name">{{item.singername}}</span>
             </p>
+          </div>
+          <div class="song-listenCount">
+            <i class="gxs-icon gxs-icon-listenCount"><img src="../assets/images/icon-song-listenCount.png" alt=""></i>
+            <div class="listenCount">{{item.listenCount | listenCount}}</div>
           </div>
         </div>
       </div>
@@ -29,12 +30,13 @@
     data () {
       return {
         recommendedRes: null,
-        isRecommendedShow: true,
         list: null
       }
     },
     methods: {
       play (id) {
+        this.$parent.isCount = true
+        this.$parent.isRecommendedShow = false
         this.$http.jsonp('https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg', {
           params: {
             topid: id,
@@ -52,8 +54,12 @@
             list: this.list,
             countlist: response.data
           })
-          this.$parent.isCount = true
         })
+      }
+    },
+    filters: {
+      listenCount: num => {
+        return Math.round(num / 1000) / 10 + '万'
       }
     }
   }
