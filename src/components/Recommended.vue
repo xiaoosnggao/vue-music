@@ -35,8 +35,6 @@
     },
     methods: {
       play (id) {
-        this.$parent.isCount = true
-        this.$parent.isRecommendedShow = false
         this.$http.jsonp('https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg', {
           params: {
             topid: id,
@@ -54,6 +52,9 @@
             list: this.list,
             countlist: response.data
           })
+          this.$parent.isSearch = false
+          this.$parent.isCount = true
+          this.$parent.isRecommendedShow = false
         })
       }
     },

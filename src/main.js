@@ -17,7 +17,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    playing: false,
+    playing: true,
     currentTime: 0,
     duration: 0,
     playMode: 2,
@@ -42,13 +42,26 @@ const store = new Vuex.Store({
   mutations: {
     setPlayList (state, playList) {
       state.index = playList.index
-      console.log(playList.index)
       if (playList.list[playList.index].data) {
         state.playList.push({
           'id': playList.list[state.index].data.songid,
           'mid': playList.list[state.index].data.songmid,
           'name': playList.list[state.index].data.songname,
           'singer': playList.list[state.index].data.singer[0].name
+        })
+      } else if (playList.list[playList.index].musicData) {
+        state.playList.push({
+          'id': playList.list[state.index].musicData.songid,
+          'mid': playList.list[state.index].musicData.songmid,
+          'name': playList.list[state.index].musicData.songname,
+          'singer': playList.list[state.index].musicData.singer[0].name
+        })
+      } else if (playList.list[playList.index].belongCD) {
+        state.playList.push({
+          'id': playList.list[state.index].songid,
+          'mid': playList.list[state.index].songmid,
+          'name': playList.list[state.index].songname,
+          'singer': playList.list[state.index].singer[0].name
         })
       } else {
         state.playList.push(playList.list[state.index])
@@ -114,23 +127,6 @@ const store = new Vuex.Store({
       state.index = (state.index + 1) % state.playList.length
       state.song = state.playList[state.index]
     },
-    playContinue (state) {
-      switch (state.playMode) {
-        case 1:
-          state.index = 0
-          state.song = state.playList[state.index]
-          break
-        case 2:
-          state.playList.length <= 1 ? state.isLoop = true : state.isLoop = false
-          state.index = (state.index + 1) % state.playList.length
-          state.song = state.playList[state.index]
-          break
-        case 3:
-          state.index = Math.floor(Math.random() * state.playList.length)
-          state.song = state.playList[state.index]
-          break
-      }
-    },
     changePlayMode (state) {
       state.playMode = (state.playMode + 1) % 3
     }
@@ -141,6 +137,25 @@ const store = new Vuex.Store({
     },
     duration: state => {
       return parseInt(state.duration / 60) + ':' + (Array(2).join(0) + (state.duration % 60)).slice(-2)
+    }
+  },
+  actions: {
+    playContinue ({commit, state}) {
+      if (state.playList.length <= 1) {
+        document.getElementById('music').currentTime = 0
+        commit('updateCurrentTime', 0)
+        state.song = state.playList[state.index]
+        return
+      }
+      if (state.playMode === 1) {
+      } else if (state.playMode === 2) {
+        state.index = (state.index + 1) % state.playList.length
+        state.song = state.playList[state.index]
+      } else {
+        state.index = Math.floor(Math.random() * state.playList.length)
+        state.song = state.playList[state.index]
+        console.log(state.playList, state.playMode, state.index)
+      }
     }
   }
 })

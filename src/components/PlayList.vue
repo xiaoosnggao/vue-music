@@ -1,8 +1,8 @@
 <template>
   <div class="list-warp play-list-warp count-warp">
-    <div class="audio-head count-head">
-      <div class="audio-bank" v-on:click="clonePlayList">
-        <i class="icon-chevron-left"></i>
+    <div class="audio-head header">
+      <div class="search-bank">
+        <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
       </div>
       <div class="audio-title"><p class="song-name">播放列表</p></div>
     </div>
@@ -16,7 +16,7 @@
         <div class="count-box-button" v-on:click="list(index)"><i class="icon-angle-down"></i></div>
       </div>
     </div>
-    <div class="list-bg" v-on:click="clonePlayList"></div>
+    <div class="list-bg" v-on:click="bank($event)"></div>
     <transition name="fade">
       <play-list-meng v-if="isPlayListMeng" v-bind:ListMeng="isPlayListMeng" v-bind:index="playListIndex" v-bind:clickPlayList="playListNew"></play-list-meng>
     </transition>
@@ -41,19 +41,19 @@
     components: {
       PlayListMeng
     },
-    props: ['ListMeng', 'index', 'clickPlayList'],
+    props: ['ListMeng', 'index'],
     mounted () {
     },
     methods: {
-      clonePlayList () {
-        this.$emit('clonePlayList')
+      bank () {
+        this.$parent.isPlayList = false
       },
       play (index) {
         this.$store.state['playing'] = true
         this.$store.commit('getPlayList', {
           index: index
         })
-        this.clonePlayList()
+        this.bank()
       },
       list (index) {
         this.isPlayListMeng = true

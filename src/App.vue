@@ -1,29 +1,36 @@
 <template>
-    <div class="gxs-vh">
-        <div class="gxs-header">
-            <search></search>
-        </div>
-        <div class="gxs-body">
-            <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated zoomOut" mode="out-in">
-                <audio-box v-show="isAudioShow"></audio-box>
-            </transition>
-            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
-                <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
-            </transition>
-            <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight"
-                        mode="out-in">
-                <count v-if="isCount"></count>
-            </transition>
-            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
-                <search-list v-if="isSearch" v-bind:searchListData="searchRes"></search-list>
-            </transition>
-        </div>
-        <div class="gxs-footer">
-            <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
-                <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
-            </transition>
-        </div>
-    </div>
+  <div class="gxs-vh">
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <search v-if="isSearch"></search>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <audio-box v-show="isAudioShow"></audio-box>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
+      <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight" mode="out-in">
+      <count v-if="isCount"></count>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <search-list v-if="isSearchList" v-bind:searchListData="searchRes"></search-list>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <singer v-if="isSinger" v-bind:searchSingerData="searchSinger"></singer>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <album v-if="isAlbum" v-bind:searchAlbumData="searchAlbum"></album>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+      <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <list-meng v-if="isListMeng" v-bind:ListMeng="isListMeng" v-bind:coIndex="countIndex"></list-meng>
+    </transition>
+    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+      <play-list v-if="isPlayList"></play-list>
+    </transition>
+  </div>
 </template>
 <script type="text/ecmascript-6">
   import Search from './components/Search'
@@ -31,7 +38,11 @@
   import AudioBox from './components/Audio'
   import AudioNav from './components/AudioNav'
   import Count from './components/Count'
-  import SearchList from './components/SearchList.vue'
+  import SearchList from './components/SearchList'
+  import Singer from './components/Singer'
+  import ListMeng from './components/ListMeng'
+  import PlayList from './components/PlayList'
+  import Album from './components/Album'
   import {mapMutations, mapState} from 'vuex'
 
   export default {
@@ -42,13 +53,21 @@
         isAudioShow: false,
         isRecommendedShow: true,
         isAudioNav: true,
-        isSearch: false,
-        searchRes: null
+        isSearch: true,
+        isSearchList: false,
+        isSinger: false,
+        isAlbum: false,
+        isListMeng: false,
+        isPlayList: false,
+        searchRes: null,
+        searchSinger: null,
+        countIndex: null,
+        searchAlbum: null
       }
     },
-    props: ['top', 'searchListData'],
+    props: ['top', 'searchListData', 'searchAlbumData'],
     components: {
-      Search, Recommended, AudioBox, AudioNav, Count, SearchList
+      Search, Recommended, AudioBox, AudioNav, Count, SearchList, Singer, ListMeng, PlayList, Album
     },
     methods: {
       ...mapMutations([
@@ -95,7 +114,6 @@
           },
           jsonp: 'callback'
         }).then(function (response) {
-          console.log(1)
           this.$store.state['coverImgUrl'] = response.data.url
         })
       }

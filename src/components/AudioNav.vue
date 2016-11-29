@@ -1,5 +1,5 @@
 <template>
-  <div class="audio-nav">
+  <div class="audio-nav gxs-footer">
     <div class="audio-img" v-on:click="showAudio">
       <img v-bind:src="coverImgUrl" alt="">
     </div>
@@ -51,11 +51,7 @@
         'playNext', 'playFront'
       ]),
       showAudio () {
-        this.$parent.isAudioNav = false
         this.$parent.isAudioShow = true
-        this.$parent.isRecommendedShow = false
-        this.$parent.isSearch = false
-        this.$parent.isCount = false
       },
       updateTime () {
         this.$store.commit('updateCurrentTime', parseInt(document.getElementById('music').currentTime))

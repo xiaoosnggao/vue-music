@@ -24,6 +24,10 @@
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
+.animated.fast {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
 
 .animated.flipOutX,
 .animated.flipOutY,
