@@ -621,7 +621,7 @@ textarea {
   right: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  padding-bottom: 7rem;
+  padding-bottom: 5.4rem;
 }
 .header {
   position: fixed;
@@ -677,7 +677,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 7rem;
+  padding-bottom: 5.4rem;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
 }
@@ -910,7 +910,7 @@ textarea {
   color: #c2c8d2;
 }
 .gxs-footer.audio-nav {
-  height: 6rem;
+  height: 4.4rem;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -937,7 +937,7 @@ textarea {
 }
 .gxs-footer.audio-nav .audio-progress-warp {
   position: absolute;
-  left: 6rem;
+  left: 4.4rem;
   right: 0;
   bottom: 0;
   display: flex;
@@ -945,8 +945,8 @@ textarea {
   flex-wrap: wrap;
 }
 .gxs-footer.audio-nav .audio-img {
-  width: 6rem;
-  height: 6rem;
+  width: 4.4rem;
+  height: 4.4rem;
 }
 .gxs-footer.audio-nav .audio-img img {
   width: 100%;
@@ -964,6 +964,7 @@ textarea {
   flex: 1;
   padding-left: 10px;
   overflow: hidden;
+  margin-top: -2px;
 }
 .gxs-footer.audio-nav .audio-name p {
   display: block;
@@ -972,14 +973,16 @@ textarea {
   text-overflow: ellipsis;
 }
 .gxs-footer.audio-nav .audio-name .song-name {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1.5em;
   color: #fff;
 }
 .gxs-footer.audio-nav .audio-name .song-singer {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #c2c8d2;
 }
 .gxs-footer.audio-nav .audio-nav-button {
+  margin-top: -2px;
   width: 140px;
   display: flex;
   display: -webkit-flex;
@@ -1000,7 +1003,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  padding-bottom: 7rem;
+  padding-bottom: 5.4rem;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   -webkit-transition: all 0.3s;
@@ -1012,7 +1015,7 @@ textarea {
 .recommended-warp .recommended-title {
   font-size: 1.5rem;
   line-height: 1em;
-  padding-bottom: .8rem;
+  padding-bottom: .4rem;
   color: #fff;
   display: block;
   white-space: nowrap;
@@ -1060,11 +1063,11 @@ textarea {
   background-size: 100% 100%;
 }
 .recommended-warp .recommended-bd .audio-item .topList-img {
-  width: 15rem;
+  width: 12rem;
 }
 .recommended-warp .recommended-bd .audio-item .recommended-box-img {
-  width: 15rem;
-  height: 15rem;
+  width: 12rem;
+  height: 12rem;
 }
 .recommended-warp .recommended-bd .audio-item .recommended-box-img img {
   width: 100%;
@@ -1073,7 +1076,7 @@ textarea {
   font-size: 1.2rem;
 }
 .recommended-warp .topList-list {
-  padding: 1rem .5rem;
+  padding: 1rem 1rem;
   /* IE 9 */
   /* Safari and Chrome */
   -o-flex: 1;
@@ -1087,7 +1090,7 @@ textarea {
   overflow: hidden;
 }
 .recommended-warp .recommended-box {
-  padding: .8rem 0;
+  padding: .4rem 0;
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -1131,7 +1134,7 @@ textarea {
   display: flex;
   display: -webkit-flex;
   align-items: center;
-  margin-top: 1.2rem;
+  margin-top: .8rem;
 }
 .recommended-warp .song-listenCount .listenCount {
   font-size: 1rem;
@@ -1188,7 +1191,7 @@ textarea {
   bottom: 0;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  padding-bottom: 7rem;
+  padding-bottom: 5.4rem;
   z-index: 9;
 }
 .count-warp .count-touch {
