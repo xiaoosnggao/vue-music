@@ -22,7 +22,7 @@
     </transition>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script type="text/javascript">
   import PlayListMeng from './PlayListMeng'
   import {mapState} from 'vuex'
   export default {

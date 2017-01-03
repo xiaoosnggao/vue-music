@@ -20,7 +20,7 @@
     </div>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script type="text/javascript">
   import {mapGetters, mapMutations, mapState} from 'vuex'
   export default {
     name: 'Search',

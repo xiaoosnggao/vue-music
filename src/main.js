@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
 import Vuex from 'vuex'
+
 // 引入静态资源
 require('./assets/css/style.css')
 require('./assets/css/animate.css')
@@ -17,25 +18,20 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    playing: true,
+    playing: false,
     currentTime: 0,
     duration: 0,
     playMode: 2,
     index: 0,
     isLoop: false,
-    coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003y8dsH2wBHlo.jpg?max_age=2592000',
+    coverImgUrl: null,
     song: {
-      id: '102636799',
-      mid: '001Qu4I30eVFYb',
-      name: '演员',
-      singer: '薛之谦'
+      id: null,
+      mid: null,
+      name: null,
+      singer: null
     },
-    playList: [{
-      id: '102636799',
-      mid: '001Qu4I30eVFYb',
-      name: '演员',
-      singer: '薛之谦'
-    }],
+    playList: [],
     count: [],
     countlist: []
   },

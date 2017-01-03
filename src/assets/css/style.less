@@ -960,10 +960,17 @@ textarea {
     }
   }
   .search-bank {
-    margin-right: 2rem;
+    margin-right: 20px;
     .gxs-icon {
-      width: 2.2rem;
-      height: 2.2rem;
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+  }
+  .search-menu {
+    margin-right: 20px;
+    .gxs-icon {
+      width: auto;
+      height: 1.7rem;
     }
   }
   .search-button {
@@ -1029,6 +1036,7 @@ textarea {
   bottom: 0;
   right: 0;
   width: 100%;
+  overflow: hidden;
   .display-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1039,6 +1047,8 @@ textarea {
   .audio-box {
     position: relative;
     z-index: 10;
+    height: 20rem;
+    overflow: hidden;
     .audio-box-img {
       min-width: 100%;
       overflow: hidden;
@@ -1097,8 +1107,8 @@ textarea {
   }
   .audio-nav {
     z-index: 10;
-    padding: 3rem;
-    margin-bottom: 5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
     .display-flex;
     flex-direction: column;
 
@@ -1164,25 +1174,29 @@ textarea {
   .display-flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.header {
   .audio-title {
+    margin-right: 42px;
     .flex(1);
     .display-flex;
     width: 100%;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     overflow: hidden;
     p {
       text-align: center;
     }
     .song-name {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: @titleColor;
+      font-weight: normal;
       .ellipsis;
-      line-height: 1.5em;
+      margin-right: 1rem;
     }
     .singer-name {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: @headColor;
     }
   }
@@ -1310,12 +1324,13 @@ textarea {
         background-size: 100% 100%;
       }
       .topList-img {
-        width: 12rem;
+        width: 11.6rem;
+        height: 11.6rem;
+        overflow: hidden;
       }
 
       .recommended-box-img {
-        width: 12rem;
-        height: 12rem;
+        width: 11.6rem;
 
         img {
           width: 100%;
@@ -1331,6 +1346,7 @@ textarea {
   }
 
   .topList-list {
+    height: 11.6rem;
     padding: 1rem 1rem;
     .flex(1);
     overflow: hidden;
@@ -1622,4 +1638,24 @@ textarea {
 .gxs-pauseClass {
   background: url("../../assets/images/icon-pauseClass.png") no-repeat center center;
   background-size: 100% auto;
+}
+
+.lyric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  .lyric-item {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    opacity: .6;
+    line-height: 2em;
+    .transition(all, .1s);
+    &.cur {
+      opacity: 1;
+    }
+  }
 }

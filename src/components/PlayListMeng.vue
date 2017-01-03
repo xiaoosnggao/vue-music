@@ -10,7 +10,7 @@
     <div class="list-bg" v-on:click="cloneListMeng(isPlayListMeng)"></div>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script type="text/javascript">
   import {mapState} from 'vuex'
   export default {
     name: 'Search',

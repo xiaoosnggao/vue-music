@@ -4,6 +4,10 @@
       <div class="search-bank">
         <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
       </div>
+      <div class="audio-title">
+        <p class="song-name">{{song.name}}</p>
+        <p class="singer-name">{{song.singer}}</p>
+      </div>
     </div>
     <div class="audio-box">
       <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinueS" v-bind:autoplay="dataAutoPlay"
@@ -23,11 +27,8 @@
         </div>
       </div>
     </div>
-    <div class="audio-head">
-      <div class="audio-title">
-        <p class="song-name">{{song.name}}</p>
-        <p class="singer-name">{{song.singer}}</p>
-      </div>
+    <div class="lyric" ref="abc">
+      <p class="lyric-item" v-for="data in lyric" v-bind:class="data[0][1]">{{data[1]}}</p>
     </div>
     <div class="audio-nav">
       <div class="audio-nav-button">
@@ -47,6 +48,8 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
+  import Base64 from '../base64.js'
+  import $ from 'jQuery'
   import PlayList from './PlayList'
   import {mapMutations, mapGetters, mapState} from 'vuex'
   export default {
@@ -60,7 +63,8 @@
         isId: null,
         pauseClass: 'icon-pause',
         PlayClass: 'icon-play',
-        playModeClass: null
+        playModeClass: null,
+        lyric: null
       }
     },
     components: {
@@ -99,6 +103,27 @@
       ]),
       ...mapState({
         indicatorPosition (state) {
+          let dataTime
+          for (let data in this.lyric) {
+            dataTime = data.split(":");
+            dataTime = parseInt(dataTime[0]) * 60 + parseInt(dataTime[1])
+            if (state.currentTime == dataTime) {
+              let reg = /^\n/
+              if (!reg.test(this.lyric[data][1])) {
+                for (let inData in this.lyric) {
+                  if (this.lyric[inData][0][1] == 'cur') {
+                    this.lyric[inData][0][1] = ''
+                  }
+                }
+                let ele = $(".lyric").find(".cur")
+                if (ele.length > 0) {
+                  $(".lyric").animate({'scrollTop': $(".lyric").scrollTop() + ele.offset().top - $(".lyric").offset().top - 30}, 350)
+                }
+                this.lyric[data][0].push('cur')
+              }
+            }
+            dataTime = '';
+          }
           return state.currentTime / state.duration * 100
         }
       })
@@ -132,7 +157,26 @@
         'playNext', 'playFront', 'changePlayMode'
       ])
     },
-    watch: {}
+    watch: {
+      song (song) {
+        $(".lyric").animate({'scrollTop': 0}, 350)
+        this.$http.jsonp('https://api.darlin.me/music/lyric/' + song.id, {
+          jsonp: 'callback'
+        }).then(function (response) {
+          this.lyric = Base64
+            .decode(response.data.lyric)
+            .split('[')
+            .slice(5)
+            .map(str => {
+              let t = str.split(']')
+              return {[t[0]]: [[t[0]], t[1]]}
+            })
+            .reduce((a, b) => {
+              return {...a, ...b}
+            });
+        })
+      }
+    }
   }
 </script>
 <style type="text/css">

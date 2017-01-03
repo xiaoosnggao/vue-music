@@ -9,7 +9,8 @@
     <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
       <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight"
+                mode="out-in">
       <count v-if="isCount"></count>
     </transition>
     <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
@@ -32,7 +33,7 @@
     </transition>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script type="text/javascript">
   import Search from './components/Search'
   import Recommended from './components/Recommended'
   import AudioBox from './components/Audio'
@@ -62,7 +63,7 @@
         searchRes: null,
         searchSinger: null,
         countIndex: null,
-        searchAlbum: null
+        searchAlbum: null,
       }
     },
     props: ['top', 'searchListData', 'searchAlbumData'],

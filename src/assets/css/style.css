@@ -658,11 +658,18 @@ textarea {
   width: 100%;
 }
 .header .search-bank {
-  margin-right: 2rem;
+  margin-right: 20px;
 }
 .header .search-bank .gxs-icon {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.1rem;
+  height: 2.1rem;
+}
+.header .search-menu {
+  margin-right: 20px;
+}
+.header .search-menu .gxs-icon {
+  width: auto;
+  height: 1.7rem;
 }
 .header .search-button {
   padding-left: 2rem;
@@ -736,6 +743,7 @@ textarea {
   bottom: 0;
   right: 0;
   width: 100%;
+  overflow: hidden;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -748,6 +756,8 @@ textarea {
 .audio-warp .audio-box {
   position: relative;
   z-index: 10;
+  height: 20rem;
+  overflow: hidden;
 }
 .audio-warp .audio-box .audio-box-img {
   min-width: 100%;
@@ -813,8 +823,8 @@ textarea {
 }
 .audio-warp .audio-nav {
   z-index: 10;
-  padding: 3rem;
-  margin-bottom: 5rem;
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -875,7 +885,8 @@ textarea {
   justify-content: space-between;
   align-items: center;
 }
-.audio-head .audio-title {
+.header .audio-title {
+  margin-right: 42px;
   /* IE 9 */
   /* Safari and Chrome */
   -o-flex: 1;
@@ -890,23 +901,24 @@ textarea {
   display: -webkit-flex;
   width: 100%;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
 }
-.audio-head .audio-title p {
+.header .audio-title p {
   text-align: center;
 }
-.audio-head .audio-title .song-name {
-  font-size: 2rem;
+.header .audio-title .song-name {
+  font-size: 1.6rem;
   color: #fff;
+  font-weight: normal;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.5em;
+  margin-right: 1rem;
 }
-.audio-head .audio-title .singer-name {
-  font-size: 1.2rem;
+.header .audio-title .singer-name {
+  font-size: 1.6rem;
   color: #c2c8d2;
 }
 .gxs-footer.audio-nav {
@@ -1063,11 +1075,12 @@ textarea {
   background-size: 100% 100%;
 }
 .recommended-warp .recommended-bd .audio-item .topList-img {
-  width: 12rem;
+  width: 11.6rem;
+  height: 11.6rem;
+  overflow: hidden;
 }
 .recommended-warp .recommended-bd .audio-item .recommended-box-img {
-  width: 12rem;
-  height: 12rem;
+  width: 11.6rem;
 }
 .recommended-warp .recommended-bd .audio-item .recommended-box-img img {
   width: 100%;
@@ -1076,6 +1089,7 @@ textarea {
   font-size: 1.2rem;
 }
 .recommended-warp .topList-list {
+  height: 11.6rem;
   padding: 1rem 1rem;
   /* IE 9 */
   /* Safari and Chrome */
@@ -1386,4 +1400,27 @@ textarea {
 .gxs-pauseClass {
   background: url("../../assets/images/icon-pauseClass.png") no-repeat center center;
   background-size: 100% auto;
+}
+.lyric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+}
+.lyric .lyric-item {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  opacity: .6;
+  line-height: 2em;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.lyric .lyric-item.cur {
+  opacity: 1;
 }
