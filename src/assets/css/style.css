@@ -622,6 +622,9 @@ textarea {
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   padding-bottom: 5.4rem;
+  background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 .header {
   position: fixed;
@@ -1402,9 +1405,35 @@ textarea {
   background-size: 100% auto;
 }
 .lyric {
+  /* IE 9 */
+  /* Safari and Chrome */
+  -o-flex: 1;
+  /* Opera */
+  -moz-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   display: flex;
+  display: -webkit-flex;
+  -ms-flex-direction: column;
+  /* IE 9 */
+  -webkit-flex-direction: column;
+  /* Safari and Chrome */
+  -o-flex-direction: column;
+  /* Opera */
+  -moz-flex-direction: column;
+  /* Firefox */
   flex-direction: column;
+  -ms-align-content: center;
+  /* IE 9 */
+  -webkit-align-content: center;
+  /* Safari and Chrome */
+  -o-align-content: center;
+  /* Opera */
+  -moz-align-content: center;
+  /* Firefox */
   align-content: center;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;

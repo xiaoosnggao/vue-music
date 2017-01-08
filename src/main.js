@@ -8,9 +8,14 @@ require('./assets/css/style.css')
 require('./assets/css/animate.css')
 require('./assets/js/sherd.js')
 
-import 'jquery'
 // 引入组件
 import App from './App'
+import SearchList from './components/SearchList'
+import Singer from './components/Singer'
+import Album from './components/Album'
+import Audio from './components/Audio'
+import Recommended from './components/Recommended'
+import Count from './components/Count'
 
 Vue.use(VueRouter)
 Vue.use(vueResource)
@@ -31,9 +36,13 @@ const store = new Vuex.Store({
       name: null,
       singer: null
     },
+    lyric: null,
     playList: [],
     count: [],
-    countlist: []
+    countList: [],
+    searchRes: null,
+    searchAlbumData: null,
+    isShowInput: false
   },
   mutations: {
     setPlayList (state, playList) {
@@ -79,7 +88,7 @@ const store = new Vuex.Store({
     },
     setCountList (state, countList) {
       state.count = countList.list
-      state.countlist = countList.countlist
+      state.countList = countList.countList
     },
     addToPlayList (state, item) {
       state.playList.push({'id': item.list.songid, 'mid': item.list.songmid, 'name': item.list.songname, 'singer': item.list.singer[0].name})
@@ -140,7 +149,7 @@ const store = new Vuex.Store({
       if (state.playList.length <= 1) {
         document.getElementById('music').currentTime = 0
         commit('updateCurrentTime', 0)
-        state.song = state.playList[state.index]
+        state.song = state.playList[0]
         return
       }
       if (state.playMode === 1) {
@@ -157,7 +166,41 @@ const store = new Vuex.Store({
 })
 
 const routes = [
-  {path: '/', name: 'index', component: App}
+  {
+    path: '/',
+    name: 'index',
+    redirect: '/recommended',
+    component: App,
+    children: [
+      {
+        path: 'searchList',
+        component: SearchList
+      }, {
+        path: 'singer',
+        component: Singer
+      },
+      {
+        path: 'album',
+        component: Album
+      },
+      {
+        path: 'audio',
+        component: Audio
+      },
+      {
+        path: 'recommended',
+        component: Recommended
+      },
+      {
+        path: 'count',
+        component: Count
+      }
+    ]
+  },
+  {
+    path: '*',
+    redirect: '/'
+  }
 ]
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。

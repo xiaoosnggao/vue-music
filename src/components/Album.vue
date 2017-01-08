@@ -1,39 +1,67 @@
 <template>
-  <div class="count-warp">
-    <div class="header">
-      <div class="search-bank">
-        <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
+  <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
+    <div class="count-warp">
+      <div class="header">
+        <div class="search-bank">
+          <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
+        </div>
+      </div>
+      <div class="count-touch">
+        <div class="count-box-hd">
+          <img v-bind:src="imgurl(searchAlbumData)" alt="">
+          <div class="count-info">
+            <div class="count-title">{{searchAlbumData.name}}</div>
+            <div class="count-date">歌手：{{searchAlbumData.singername}}</div>
+            <div class="count-date">发行公司：{{searchAlbumData.company}}</div>
+            <div class="count-date">发行时间：{{searchAlbumData.aDate}}</div>
+          </div>
+        </div>
+        <div class="count-box" v-for="(item,index) in searchAlbumData.list">
+          <div class="count-box-index" v-if="item">{{index+1}}</div>
+          <div class="count-box-info" v-on:click="play(index)">
+            <p class="count-box-title">{{item.songname}}</p>
+            <p class="count-box-name">{{item.songname}}</p>
+          </div>
+          <div class="count-box-button" v-on:click="list(index)">
+            <i class="icon-angle-down"></i>
+          </div>
+        </div>
+        <div class="count-box">
+          <p class="count-box-infoDesc">{{searchAlbumData.desc}}</p>
+        </div>
       </div>
     </div>
-    <div class="count-touch">
-      <div class="count-box-hd">
-        <img v-bind:src="imgurl(searchAlbumData)" alt="">
-        <div class="count-info">
-          <div class="count-title">{{searchAlbumData.name}}</div>
-          <div class="count-date">歌手：{{searchAlbumData.singername}}</div>
-          <div class="count-date">发行公司：{{searchAlbumData.company}}</div>
-          <div class="count-date">发行时间：{{searchAlbumData.aDate}}</div>
-        </div>
-      </div>
-      <div class="count-box" v-for="(item,index) in searchAlbumData.list">
-        <div class="count-box-index" v-if="item">{{index+1}}</div>
-        <div class="count-box-info" v-on:click="play(index)">
-          <p class="count-box-title">{{item.songname}}</p>
-          <p class="count-box-name">{{item.songname}}</p>
-        </div>
-        <div class="count-box-button" v-on:click="list(index)">
-          <i class="icon-angle-down"></i>
-        </div>
-      </div>
-      <div class="count-box">
-        <p class="count-box-infoDesc">{{searchAlbumData.desc}}</p>
-      </div>
-    </div>
-  </div>
+  </transition>
 </template>
 <script type="text/ecmascript-6">
+  import {mapState} from 'vuex'
+
   export default {
-    props: ['searchAlbumData'],
+    computed: {
+      ...mapState([
+        'searchAlbumData'
+      ])
+    },
+    beforeMount () {
+      this.$parent.isSearch = false
+      this.$http.jsonp('http://c.y.qq.com/v8/fcg-bin/fcg_v8_album_info_cp.fcg', {
+        params: {
+          albummid: this.$route.query.search,
+          g_tk: 5381,
+          loginUin: 0,
+          hostUin: 0,
+          format: 'jsonp',
+          inCharset: 'utf8',
+          outCharset: 'utf-8',
+          notice: 0,
+          platform: 'yqq',
+          needNewCode: 0
+        },
+        jsonp: 'jsonpCallback'
+      }).then((response) => {
+        this.$store.state['searchAlbumData'] = response.data.data
+      })
+    },
     methods: {
       imgurl (searchAlbumData) {
         console.log(searchAlbumData.mid)
@@ -48,9 +76,8 @@
         this.$parent.isAudioShow = true
       },
       bank () {
-        this.$parent.isAlbum = false
         this.$parent.isSearch = true
-        this.$parent.isSearchList = true
+        this.$router.go(-1)
       },
       list (index) {
         this.$parent.isListMeng = true

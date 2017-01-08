@@ -1,5 +1,5 @@
 <template>
-  <div class="audio-nav gxs-footer" v-show="song.name">
+  <div class="audio-nav gxs-footer" v-if="song.name">
     <div class="audio-img" v-on:click="showAudio">
       <img v-bind:src="coverImgUrl" alt="">
     </div>

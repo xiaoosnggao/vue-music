@@ -48,8 +48,8 @@
   </div>
 </template>
 <script type="text/ecmascript-6">
+  import $ from 'jquery'
   import Base64 from '../base64.js'
-  import $ from 'jQuery'
   import PlayList from './PlayList'
   import {mapMutations, mapGetters, mapState} from 'vuex'
   export default {
@@ -63,8 +63,7 @@
         isId: null,
         pauseClass: 'icon-pause',
         PlayClass: 'icon-play',
-        playModeClass: null,
-        lyric: null
+        playModeClass: null
       }
     },
     components: {
@@ -99,30 +98,30 @@
         'currentTime', 'duration'
       ]),
       ...mapState([
-        'playing', 'song', 'coverImgUrl', 'playList', 'playMode', 'isLoop'
+        'playing', 'song', 'coverImgUrl', 'playList', 'playMode', 'isLoop', 'lyric'
       ]),
       ...mapState({
         indicatorPosition (state) {
           let dataTime
           for (let data in this.lyric) {
-            dataTime = data.split(":");
+            dataTime = data.split(':')
             dataTime = parseInt(dataTime[0]) * 60 + parseInt(dataTime[1])
-            if (state.currentTime == dataTime) {
+            if (state.currentTime === dataTime) {
               let reg = /^\n/
               if (!reg.test(this.lyric[data][1])) {
                 for (let inData in this.lyric) {
-                  if (this.lyric[inData][0][1] == 'cur') {
+                  if (this.lyric[inData][0][1] === 'cur') {
                     this.lyric[inData][0][1] = ''
                   }
                 }
-                let ele = $(".lyric").find(".cur")
+                let ele = $('.lyric').find('.cur')
                 if (ele.length > 0) {
-                  $(".lyric").animate({'scrollTop': $(".lyric").scrollTop() + ele.offset().top - $(".lyric").offset().top - 30}, 350)
+                  $('.lyric').animate({'scrollTop': $('.lyric').scrollTop() + ele.offset().top - $('.lyric').offset().top - 30}, 350)
                 }
                 this.lyric[data][0].push('cur')
               }
             }
-            dataTime = '';
+            dataTime = ''
           }
           return state.currentTime / state.duration * 100
         }
@@ -159,11 +158,11 @@
     },
     watch: {
       song (song) {
-        $(".lyric").animate({'scrollTop': 0}, 350)
+        $('.lyric').animate({'scrollTop': 0}, 350)
         this.$http.jsonp('https://api.darlin.me/music/lyric/' + song.id, {
           jsonp: 'callback'
         }).then(function (response) {
-          this.lyric = Base64
+          this.$store.state['lyric'] = Base64
             .decode(response.data.lyric)
             .split('[')
             .slice(5)
@@ -173,7 +172,7 @@
             })
             .reduce((a, b) => {
               return {...a, ...b}
-            });
+            })
         })
       }
     }

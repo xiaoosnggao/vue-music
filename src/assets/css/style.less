@@ -933,6 +933,9 @@ textarea {
   right: 0;
   .touch;
   padding-bottom: 5.4rem;
+  background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .header {
@@ -1641,10 +1644,10 @@ textarea {
 }
 
 .lyric {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  .flex(1);
+  .display-flex;
+  .flex-direction(column);
+  .align-content(center);
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   .lyric-item {

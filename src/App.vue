@@ -1,36 +1,28 @@
 <template>
   <div class="gxs-vh">
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+
+    <router-view></router-view>
+
+    <transition name="custom-classes-transition" enter-active-class="animated slideInDown fast" leave-active-class="animated slideOutUp" mode="out-in">
       <search v-if="isSearch"></search>
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
       <audio-box v-show="isAudioShow"></audio-box>
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
-      <recommended v-bind:top="topList" v-if="isRecommendedShow"></recommended>
-    </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight"
-                mode="out-in">
-      <count v-if="isCount"></count>
-    </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
-      <search-list v-if="isSearchList" v-bind:searchListData="searchRes"></search-list>
-    </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
-      <singer v-if="isSinger" v-bind:searchSingerData="searchSinger"></singer>
-    </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
-      <album v-if="isAlbum" v-bind:searchAlbumData="searchAlbum"></album>
-    </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated bounceIn" leave-active-class="animated bounceOut" mode="out-in">
+
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated slideOutDown" mode="out-in">
       <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
       <list-meng v-if="isListMeng" v-bind:ListMeng="isListMeng" v-bind:coIndex="countIndex"></list-meng>
     </transition>
-    <transition name="custom-classes-transition" enter-active-class="animated zoomIn fast" leave-active-class="animated zoomOutUp" mode="out-in">
+
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
       <play-list v-if="isPlayList"></play-list>
     </transition>
+
   </div>
 </template>
 <script type="text/javascript">
@@ -50,23 +42,14 @@
     data () {
       return {
         topList: null,
-        isCount: false,
         isAudioShow: false,
-        isRecommendedShow: true,
         isAudioNav: true,
         isSearch: true,
-        isSearchList: false,
-        isSinger: false,
-        isAlbum: false,
         isListMeng: false,
         isPlayList: false,
-        searchRes: null,
-        searchSinger: null,
-        countIndex: null,
-        searchAlbum: null,
+        countIndex: null
       }
     },
-    props: ['top', 'searchListData', 'searchAlbumData'],
     components: {
       Search, Recommended, AudioBox, AudioNav, Count, SearchList, Singer, ListMeng, PlayList, Album
     },
