@@ -1,5 +1,4 @@
 <template>
-  <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
     <div class="count-warp" v-if="searchSingerData">
       <div class="header">
         <div class="search-bank">
@@ -29,7 +28,6 @@
         </div>
       </div>
     </div>
-  </transition>
 </template>
 <script type="text/ecmascript-6">
   export default {

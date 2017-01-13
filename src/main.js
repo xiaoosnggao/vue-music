@@ -165,6 +165,7 @@ const store = new Vuex.Store({
   }
 })
 
+
 const routes = [
   {
     path: '/',

@@ -1,6 +1,6 @@
 <template>
   <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
-    <div class="count-warp">
+    <div class="count-warp" v-if="searchAlbumData">
       <div class="header">
         <div class="search-bank">
           <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
@@ -58,13 +58,12 @@
           needNewCode: 0
         },
         jsonp: 'jsonpCallback'
-      }).then((response) => {
+      }).then(function (response) {
         this.$store.state['searchAlbumData'] = response.data.data
       })
     },
     methods: {
       imgurl (searchAlbumData) {
-        console.log(searchAlbumData.mid)
         return 'http://y.gtimg.cn/music/photo_new/T002R300x300M000' + searchAlbumData.mid + '.jpg?max_age=2592000'
       },
       play (index) {

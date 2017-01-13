@@ -1,7 +1,8 @@
 <template>
   <div class="gxs-vh">
-
-    <router-view></router-view>
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
+      <router-view></router-view>
+    </transition>
 
     <transition name="custom-classes-transition" enter-active-class="animated slideInDown fast" leave-active-class="animated slideOutUp" mode="out-in">
       <search v-if="isSearch"></search>
@@ -25,7 +26,7 @@
 
   </div>
 </template>
-<script type="text/javascript">
+<script type="text/ecmascript-6">
   import Search from './components/Search'
   import Recommended from './components/Recommended'
   import AudioBox from './components/Audio'

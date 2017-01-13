@@ -47,7 +47,7 @@
     </div>
   </div>
 </template>
-<script type="text/ecmascript-6">
+<script type="text/javascript">
   import $ from 'jquery'
   import Base64 from '../base64.js'
   import PlayList from './PlayList'
@@ -107,19 +107,16 @@
             dataTime = data.split(':')
             dataTime = parseInt(dataTime[0]) * 60 + parseInt(dataTime[1])
             if (state.currentTime === dataTime) {
-              let reg = /^\n/
-              if (!reg.test(this.lyric[data][1])) {
-                for (let inData in this.lyric) {
-                  if (this.lyric[inData][0][1] === 'cur') {
-                    this.lyric[inData][0][1] = ''
-                  }
+              for (let inData in this.lyric) {
+                if (this.lyric[inData][0][1] === 'cur') {
+                  this.lyric[inData][0][1] = ''
                 }
-                let ele = $('.lyric').find('.cur')
-                if (ele.length > 0) {
-                  $('.lyric').animate({'scrollTop': $('.lyric').scrollTop() + ele.offset().top - $('.lyric').offset().top - 30}, 350)
-                }
-                this.lyric[data][0].push('cur')
               }
+              let ele = $('.lyric').find('.cur')
+              if (ele.length > 0) {
+                $('.lyric').animate({'scrollTop': $('.lyric').scrollTop() + ele.offset().top - $('.lyric').offset().top - 30}, 350)
+              }
+              this.lyric[data][0].push('cur')
             }
             dataTime = ''
           }

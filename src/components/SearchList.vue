@@ -1,42 +1,40 @@
 <template>
-  <transition name="custom-classes-transition" enter-active-class="animated fadeInRightBig fast" leave-active-class="animated fadeOutRightBig" mode="out-in">
-    <div class="search-res" v-if="searchRes">
-      <div class="search-res-song" v-if="searchRes.song">
-        <div class="search-res-title">{{searchRes.song.name}}</div>
-        <div class="search-res-box" v-for="(item,index) in searchRes.song.itemlist" v-on:click="play(index)">
-          <div class="search-res-text">
-            <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="search-res-singer" v-if="searchRes.singer">
-        <div class="search-res-title">{{searchRes.singer.name}}</div>
-        <div class="search-res-box" v-for="(item,index) in searchRes.singer.itemlist" v-on:click="getSinger(item.mid)">
-          <div class="search-res-img"><img v-bind:src="item.pic" alt=""></div>
-          <div class="search-res-text">
-            <p><span class="search-res-name">{{item.name}}</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="search-res-album" v-if="searchRes.album">
-        <div class="search-res-title">{{searchRes.album.name}}</div>
-        <div class="search-res-box" v-for="(item,index) in searchRes.album.itemlist" v-on:click="getAlbum(item.mid)">
-          <div class="search-res-img"><img v-bind:src="item.pic" alt=""></div>
-          <div class="search-res-text">
-            <p><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="search-res-mv" v-if="searchRes.mv">
-        <div class="search-res-title">{{searchRes.mv.name}}</div>
-        <div class="search-res-box" v-for="(item,index) in searchRes.mv.itemlist" v-on:click="play(index)">
-          <div class="search-res-text">
-            <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
-          </div>
+  <div class="search-res" v-if="searchRes">
+    <div class="search-res-song" v-if="searchRes.song">
+      <div class="search-res-title">{{searchRes.song.name}}</div>
+      <div class="search-res-box" v-for="(item,index) in searchRes.song.itemlist" v-on:click="play(index)">
+        <div class="search-res-text">
+          <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
         </div>
       </div>
     </div>
-  </transition>
+    <div class="search-res-singer" v-if="searchRes.singer">
+      <div class="search-res-title">{{searchRes.singer.name}}</div>
+      <div class="search-res-box" v-for="(item,index) in searchRes.singer.itemlist" v-on:click="getSinger(item.mid)">
+        <div class="search-res-img"><img v-bind:src="item.pic" alt=""></div>
+        <div class="search-res-text">
+          <p><span class="search-res-name">{{item.name}}</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="search-res-album" v-if="searchRes.album">
+      <div class="search-res-title">{{searchRes.album.name}}</div>
+      <div class="search-res-box" v-for="(item,index) in searchRes.album.itemlist" v-on:click="getAlbum(item.mid)">
+        <div class="search-res-img"><img v-bind:src="item.pic" alt=""></div>
+        <div class="search-res-text">
+          <p><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="search-res-mv" v-if="searchRes.mv">
+      <div class="search-res-title">{{searchRes.mv.name}}</div>
+      <div class="search-res-box" v-for="(item,index) in searchRes.mv.itemlist" v-on:click="play(index)">
+        <div class="search-res-text">
+          <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.name}}</span><span class="search-res-singer">{{item.singer}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script type="text/ecmascript-6">
   import {mapState} from 'vuex'

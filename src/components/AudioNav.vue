@@ -1,7 +1,7 @@
 <template>
   <div class="audio-nav gxs-footer" v-if="song.name">
-    <div class="audio-img" v-on:click="showAudio">
-      <img v-bind:src="coverImgUrl" alt="">
+    <div class="audio-img" v-on:click="showAudio" v-if="coverImgUrl">
+      <img  v-bind:src="coverImgUrl" alt="">
     </div>
     <div class="audio-name">
       <p class="song-name">{{song.name}}</p>
@@ -28,7 +28,6 @@
       return {
         isMid: null,
         isId: null,
-        coverImgUrl: null,
         pauseClass: 'icon-pause',
         PlayClass: 'icon-play'
       }

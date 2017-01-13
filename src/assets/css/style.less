@@ -923,6 +923,19 @@ textarea {
 
 .search-warp {
   padding-top: 4.4rem;
+  z-index: 99;
+}
+
+.search-hot-warp {
+  position: absolute;
+  padding-top: 4.4rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .search-hot {
@@ -933,9 +946,6 @@ textarea {
   right: 0;
   .touch;
   padding-bottom: 5.4rem;
-  background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 
 .header {
@@ -1280,13 +1290,18 @@ textarea {
 
 .recommended-warp {
   position: absolute;
-  top: 4.4rem;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   padding-bottom: 5.4rem;
   .touch;
   .transition(all, .3s);
+
+  .slider-container {
+    margin-bottom: 1rem;
+  }
+
   .recommended-title {
     font-size: 1.5rem;
     line-height: 1em;
@@ -1651,11 +1666,13 @@ textarea {
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   .lyric-item {
+    min-height: 28px;
+    height: 28px;
     text-align: center;
     font-size: 14px;
     color: #fff;
     opacity: .6;
-    line-height: 2em;
+    line-height: 28px;
     .transition(all, .1s);
     &.cur {
       opacity: 1;

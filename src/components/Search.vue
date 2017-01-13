@@ -18,10 +18,12 @@
         </div>
       </div>
       <transition name="custom-classes-transition" enter-active-class="animated fadeInUp fast" leave-active-class="animated fadeOutDown" mode="out-in">
-        <div class="search-hot" v-if="isSearchHot">
-          <div class="search-res-box" v-for="(item,index) in searchHot.hotkey" v-on:click="key($event,item.k)">
-            <div class="search-res-text">
-              <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.k}}</span><span class="search-res-singer">{{item.n}}</span></p>
+        <div class="search-hot-warp" v-if="isSearchHot">
+          <div class="search-hot">
+            <div class="search-res-box" v-for="(item,index) in searchHot.hotkey" v-on:click="key($event,item.k)">
+              <div class="search-res-text">
+                <p><span class="search-res-index">{{index+1}}</span><span class="search-res-name">{{item.k}}</span><span class="search-res-singer">{{item.n}}</span></p>
+              </div>
             </div>
           </div>
         </div>
