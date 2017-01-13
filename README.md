@@ -22,10 +22,11 @@
 1. github:[戳这里](https://github.com/gaoxiaosong1113/vue-music)  **喜欢的加个star**
 1. 预览地址： [戳这里](http://www.gxspp.com/web/vue-music)
 1. 扫一扫手机预览
+
 ![0fb31fa2b63b82607606427dd39668ef.png](./src/assets/images/1.jpg)
 
  ## UI图
-![1.png](//dn-cnode.qbox.me/FqhGttE1QRuL0tGy5sd95AIRqMry)![2.png](//dn-cnode.qbox.me/FiLmJylXe457Ggr0yup03HueJfIh)
-![3.png](//dn-cnode.qbox.me/FjpKi5N8j6tPWHC7dWlBbZwyVcMe)![4.png](//dn-cnode.qbox.me/Fi4BElgYMrDxkDVuiPDpenodb4gC)
-![5.png](//dn-cnode.qbox.me/FveS-3mk9GPNzMhiPL2iFDX04MK4)![6.png](//dn-cnode.qbox.me/FnpRGl1Ypk0B7atmScdbwMgDrCqN)
-![7.png](//dn-cnode.qbox.me/FgmY7R5gBbg16KR1gchrnoCDBXeT)![8.png](//dn-cnode.qbox.me/Fu5PtNN_ZD0vHzAPxFvuPyZtHvy2)
+![1.png](./src/assets/images/2.png)![2.png](./src/assets/images/3.png)
+![3.png](./src/assets/images/4.png)![4.png](./src/assets/images/5.png)
+![5.png](./src/assets/images/6.png)![6.png](./src/assets/images/7.png)
+![7.png](./src/assets/images/8.png)![8.png](./src/assets/images/9.png)
