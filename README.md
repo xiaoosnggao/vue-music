@@ -22,7 +22,7 @@
 1. github:[戳这里](https://github.com/gaoxiaosong1113/vue-music)  **喜欢的加个star**
 1. 预览地址： [戳这里](http://www.gxspp.com/web/vue-music)
 1. 扫一扫手机预览
-![0fb31fa2b63b82607606427dd39668ef.png](//dn-cnode.qbox.me/FvmqfHeq1EkwDw5McMAQadtukbMz)
+![0fb31fa2b63b82607606427dd39668ef.png](./src/assets/images/1.jpg)
 
  ## UI图
 ![1.png](//dn-cnode.qbox.me/FqhGttE1QRuL0tGy5sd95AIRqMry)![2.png](//dn-cnode.qbox.me/FiLmJylXe457Ggr0yup03HueJfIh)
