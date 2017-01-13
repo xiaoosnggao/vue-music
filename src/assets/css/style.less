@@ -955,8 +955,8 @@ textarea {
   right: 0;
   height: 4.4rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  .flex-direction(row);
+  .align-items(center);
   background: none;
   padding: 0 10px;
   z-index: 9999;
@@ -1015,9 +1015,9 @@ textarea {
 
 .search-res-box {
   .display-flex;
-  flex-direction: row;
+  .flex-direction(row);
   padding: 1.5rem;
-  align-items: center;
+  .align-items(center);
   .list-border-bottom;
   .search-res-img {
     width: 32px;
@@ -1051,7 +1051,7 @@ textarea {
   width: 100%;
   overflow: hidden;
   .display-flex;
-  flex-direction: column;
+  .flex-direction(column);
   justify-content: space-between;
   z-index: 99999;
   background: url("../../assets/images/body-bg.jpg") no-repeat 100%;
@@ -1067,7 +1067,7 @@ textarea {
       overflow: hidden;
       z-index: 10;
       .display-flex;
-      align-items: center;
+      .align-items(center);
       img {
         width: 100%;
       }
@@ -1085,7 +1085,7 @@ textarea {
       .transition(all, .2s);
       border-radius: 2px;
       .display-flex;
-      justify-content: flex-end;
+      .justify-content(flex-end);
       overflow: visible;
       .audio-progress-touch {
         width: 10px;
@@ -1123,7 +1123,7 @@ textarea {
     padding: 1rem 3rem;
     margin-bottom: 2rem;
     .display-flex;
-    flex-direction: column;
+    .flex-direction(column);
 
     i {
       font-weight: 100;
@@ -1133,7 +1133,7 @@ textarea {
     .audio-nav-button {
       .display-flex;
       justify-content: space-between;
-      align-items: center;
+      .align-items(center);
       .audio-play-order {
         .gxs-icon {
           width: 1.8rem;
@@ -1186,18 +1186,24 @@ textarea {
   padding-bottom: 5px;
   .display-flex;
   justify-content: space-between;
-  align-items: center;
+  .align-items(center);
 }
 
 .header {
   .audio-title {
     margin-right: 42px;
-    .flex(1);
-    .display-flex;
     width: 100%;
-    justify-content: center;
-    flex-direction: row;
+    .flex(1);
+    .ellipsis;
+    .display-flex;
+    .justify-content(flex-start);
+    .flex-direction(row);
     overflow: hidden;
+    text-shadow: 1px 1px 3px #4a4a4a;
+    .touch;
+    overflow-x: scroll;
+    height: 4.4rem;
+    line-height: 4.4rem;
     p {
       text-align: center;
     }
@@ -1205,13 +1211,11 @@ textarea {
       font-size: 1.6rem;
       color: @titleColor;
       font-weight: normal;
-      .ellipsis;
       margin-right: 1rem;
     }
     .singer-name {
-      .ellipsis;
       font-size: 1.6rem;
-      color: @headColor;
+      color: @titleColor;
     }
   }
 }
@@ -1219,9 +1223,9 @@ textarea {
 .gxs-footer {
   &.audio-nav {
     height: 4.4rem;
+    .flex-direction(row);
     .display-flex;
-    flex-direction: row;
-    align-items: center;
+    .align-items(center);
     border-top: solid 1px rgba(255, 255, 255, .4);
     background: url("../../assets/images/body-bg.jpg") no-repeat center;
     background-size: 100% auto;
@@ -1243,8 +1247,8 @@ textarea {
       left: 4.4rem;
       right: 0;
       bottom: 0;
-      .display-flex;
       flex-wrap: wrap;
+      .display-flex;
     }
     .audio-img {
       width: 4.4rem;
@@ -1254,10 +1258,10 @@ textarea {
       }
     }
     .audio-name {
-      .flex(1);
       padding-left: 10px;
       overflow: hidden;
       margin-top: -2px;
+      .flex(1);
       p {
         .ellipsis;
       }
@@ -1274,9 +1278,9 @@ textarea {
     .audio-nav-button {
       margin-top: -2px;
       width: 140px;
+      .justify-content(space-around);
       .display-flex;
-      justify-content: space-around;
-      align-items: center;
+      .align-items(center);
       i {
         display: block;
         width: 1.8rem;
@@ -1322,15 +1326,15 @@ textarea {
 
   .recommended-bd {
     .display-flex;
-    flex-direction: column;
+    .flex-direction(column);
 
     .audio-item {
       margin-bottom: 10px;
       width: 100%;
-      .display-flex;
       background: rgba(255, 255, 255, .1);
       overflow: hidden;
       position: relative;
+      .display-flex;
       &:after {
         content: "";
         position: absolute;
@@ -1338,9 +1342,9 @@ textarea {
         width: 1.2rem;
         height: 2.1rem;
         top: 50%;
-        .transform-translate;
         background: url("../../assets/images/icon--chevron-right.png") no-repeat;
         background-size: 100% 100%;
+        .transform-translate;
       }
       .topList-img {
         width: 11.6rem;
@@ -1367,16 +1371,16 @@ textarea {
   .topList-list {
     height: 11.6rem;
     padding: 1rem 1rem;
-    .flex(1);
     overflow: hidden;
+    .flex(1);
   }
 
   .recommended-box {
     padding: .4rem 0;
-    .display-flex;
-    align-items: center;
     width: 100%;
     overflow: hidden;
+    .display-flex;
+    .align-items(center);
 
     &:last-child {
       border: 0;
@@ -1392,8 +1396,8 @@ textarea {
       width: 100%;
       font-size: 1.2rem;
       color: @titleColor;
-      .ellipsis;
       line-height: 1em;
+      .ellipsis;
     }
     .song-index {
       margin-right: 1rem;
@@ -1413,7 +1417,7 @@ textarea {
   }
   .song-listenCount {
     .display-flex;
-    align-items: center;
+    .align-items(center);
     margin-top: .8rem;
     .listenCount {
       font-size: 1rem;
@@ -1449,7 +1453,7 @@ textarea {
 
 .gxs-cell {
   .display-flex;
-  align-items: center;
+  .align-items(center);
 
   .gxs-cell-hd {
   }
@@ -1507,7 +1511,7 @@ textarea {
     padding: 10px 15px;
     .display-flex;
     .list-border-bottom;
-    align-items: center;
+    .align-items(center);
     .count-box-infoDesc {
       line-height: 1.5em;
       font-size: 1.4rem;
@@ -1535,8 +1539,8 @@ textarea {
       height: 35px;
       width: 35px;
       .display-flex;
-      justify-content: flex-end;
-      align-items: center;
+      .justify-content(flex-end);
+      .align-items(center);
       i {
         color: @headColor;
       }
@@ -1559,7 +1563,6 @@ textarea {
     overflow: hidden;
     .song-name {
       color: @titleColor;
-
     }
   }
 }
@@ -1592,14 +1595,14 @@ textarea {
     .list-box {
       font-size: 1.4rem;
       color: @titleColor;
-      .list-border-bottom;
       padding: 1.4rem;
       text-align: center;
+      .list-border-bottom;
       &.list-box-audio {
         .display-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        .justify-content(center);
+        .align-items(center);
+        .flex-direction(column);
         .audio-singerName {
           font-size: 1.4rem;
           margin-top: 1rem;
@@ -1621,8 +1624,8 @@ textarea {
 }
 
 .play-list-warp {
-  align-items: flex-start;
   background: none;
+  .align-items(flex-start);
   .audio-head {
     z-index: 6;
   }
@@ -1664,8 +1667,7 @@ textarea {
   .display-flex;
   .flex-direction(column);
   .align-content(center);
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  .touch;
   .lyric-item {
     min-height: 28px;
     height: 28px;
