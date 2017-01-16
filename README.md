@@ -19,8 +19,8 @@
 
 > 有兴趣的加个前端交流群：478688652
 
-1. github:[戳这里](https://github.com/gaoxiaosong1113/vue-music)  **喜欢的加个star**
-1. 预览地址： [戳这里](http://www.gxspp.com/web/vue-music)
+1. github: [戳这里](https://github.com/gaoxiaosong1113/vue-music)  **喜欢的加个star**
+1. 预览地址：[戳这里](http://www.gxspp.com/web/vue-music)
 1. 扫一扫手机预览
 
 ![0fb31fa2b63b82607606427dd39668ef.png](./src/assets/images/1.jpg)
