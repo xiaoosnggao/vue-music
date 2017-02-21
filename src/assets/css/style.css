@@ -662,7 +662,7 @@ textarea {
   align-items: center;
   background: none;
   padding: 0 10px;
-  z-index: 9999;
+  z-index: 99;
 }
 .header .search-input {
   /* IE 9 */
@@ -1687,4 +1687,52 @@ textarea {
 }
 .lyric .lyric-item.cur {
   opacity: 1;
+}
+.weather-warp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 20%;
+  bottom: 0;
+  z-index: 9999;
+}
+.weather-warp .weather-menus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
+}
+.weather-warp .weather-menu {
+  height: 5rem;
+  padding: 0 15px;
+}
+.weather-warp .weather-hd {
+  width: 3rem !important;
+  height: 3rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.weather-warp .weather-bd,
+.weather-warp .weather-bd a {
+  font-size: 14px;
+  color: #1d1d26;
+}
+.weather-warp .weather-ft {
+  font-size: 14px;
+  color: #1d1d26;
+}
+.weather-menus-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }

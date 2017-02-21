@@ -6,7 +6,7 @@
           <i class="gxs-icon" v-on:click="bank($event)"><img src="../assets/images/icon-back.png" alt=""></i>
         </div>
         <div class="search-menu" v-if="!isShowInput">
-          <i class="gxs-icon" v-on:click=""><img src="../assets/images/icon-menuH.png" alt=""></i>
+          <i class="gxs-icon" v-on:click="menus()"><img src="../assets/images/icon-menuH.png" alt=""></i>
         </div>
         <div class="search-input">
           <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight" mode="out-in">
@@ -28,7 +28,25 @@
           </div>
         </div>
       </transition>
+      <transition name="custom-classes-transition" enter-active-class="animated fast slideInLeft" leave-active-class="animated fast slideOutLeft">
+        <div class="weather-warp" v-show="isMenus">
+          <div class="weather-menus">
+            <div class="weather-menu gxs-cell gxs-cells-icon">
+              <div class="weather-bd gxs-cell-bd gxs-cell-default"><a href="http://www.gxspp.com/web/jl/index.html">个人简历</a></div>
+              <div class="weather-ft gxs-cell-ft">最后更新：2017-02-09</div>
+            </div>
+            <div class="weather-menu gxs-cell gxs-cells-icon">
+              <div class="weather-bd gxs-cell-bd gxs-cell-default"><a href="http://www.gxspp.com">个人网站</a></div>
+              <div class="weather-ft gxs-cell-ft"></div>
+            </div>
+          </div>
+        </div>
+      </transition>
+      <transition name="custom-classes-transition" enter-active-class="animated fast fadeIn" leave-active-class="animated fast fadeOut">
+        <div class="weather-menus-bg" v-show="isMenus" v-on:click="menus()"></div>
+      </transition>
     </div>
+
   </transition>
 </template>
 <script type="text/ecmascript-6">
@@ -40,7 +58,8 @@
         searchList: null,
         searchInfo: '',
         searchHot: null,
-        isSearchHot: false
+        isSearchHot: false,
+        isMenus: false
       }
     },
     beforeMount () {
@@ -54,6 +73,9 @@
       ])
     },
     methods: {
+      menus () { // 判断是否显示menu菜单
+        this.isMenus = !this.isMenus
+      },
       keyUp (event, val) {
         if (val === '') {
           this.$http.jsonp('http://c.y.qq.com/splcloud/fcgi-bin/gethotkey.fcg', {

@@ -959,7 +959,7 @@ textarea {
   .align-items(center);
   background: none;
   padding: 0 10px;
-  z-index: 9999;
+  z-index: 99;
   .search-input {
     .flex(1);
     .gxs-input {
@@ -1681,4 +1681,55 @@ textarea {
       opacity: 1;
     }
   }
+}
+
+.weather-warp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 20%;
+  bottom: 0;
+  z-index: 9999;
+  .weather-menus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+  }
+  .weather-menu {
+    height: 5rem;
+    padding: 0 15px;
+  }
+
+  .weather-hd {
+    width: 3rem !important;
+    height: 3rem;
+    .display-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
+  .weather-bd {
+    &, a {
+      font-size: 14px;
+      color: rgb(29, 29, 38);
+    }
+  }
+  .weather-ft {
+    font-size: 14px;
+    color: rgb(29, 29, 38);
+  }
+}
+
+.weather-menus-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 999;
 }
