@@ -10,25 +10,23 @@
       </div>
     </div>
     <div class="audio-box">
-      <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinueS" v-bind:autoplay="dataAutoPlay"
+      <audio id="music" v-bind:src="dataUrl" v-on:timeupdate="updateTime" v-on:ended="playContinueS"
+             v-bind:autoplay="dataAutoPlay"
              v-bind:loop="isLoop"></audio>
-      <div class="audio-box-img">
-        <img v-bind:src="coverImgUrl" alt="">
-      </div>
-      <div class="audio-progress-warp">
-        <div class="audio-progress" v-on:click="touchSit($event)">
-          <div class="audio-progress-box" v-bind:style="{width:indicatorPosition+'%'}">
-            <div class="audio-progress-touch"></div>
-          </div>
-        </div>
-        <div class="audio-progress-text">
-          <p>{{currentTime}}</p>
-          <p>{{duration}}</p>
-        </div>
-      </div>
     </div>
     <div class="lyric" ref="abc">
       <p class="lyric-item" v-for="data in lyric" v-bind:class="data[0][1]">{{data[1]}}</p>
+    </div>
+    <div class="audio-progress-warp">
+      <div class="audio-progress" v-on:click="touchSit($event)">
+        <div class="audio-progress-box" v-bind:style="{width:indicatorPosition+'%'}">
+          <div class="audio-progress-touch"></div>
+        </div>
+      </div>
+      <div class="audio-progress-text">
+        <p>{{currentTime}}</p>
+        <p>{{duration}}</p>
+      </div>
     </div>
     <div class="audio-nav">
       <div class="audio-nav-button">
@@ -37,7 +35,8 @@
         </div>
         <div class="audio-nav-btn">
           <i class="audio-l" v-on:click="playFront"><img src="../assets/images/icon-step-backward.png" alt=""></i>
-          <i class="audio-c" v-bind:class="playing ? 'gxs-playClass' : 'gxs-pauseClass'" v-on:click="$parent.tapButton"></i>
+          <i class="audio-c" v-bind:class="playing ? 'gxs-playClass' : 'gxs-pauseClass'"
+             v-on:click="$parent.tapButton"></i>
           <i class="audio-r" v-on:click="playNext"><img src="../assets/images/icon-icon-step-forward.png" alt=""></i>
         </div>
         <div class="audio-list">
@@ -47,7 +46,8 @@
     </div>
   </div>
 </template>
-<script type="text/javascript">
+
+<script type="text/ecmascript-6">
   import $ from 'jquery'
   import Base64 from '../base64.js'
   import PlayList from './PlayList'
@@ -88,7 +88,11 @@
           } else {
             this.isId = state.song.id
           }
-          return 'http://ws.stream.qqmusic.qq.com//' + this.isId + '.m4a?fromtag=46'
+          if (this.isId) {
+            return 'http://ws.stream.qqmusic.qq.com//' + this.isId + '.m4a?fromtag=46'
+          } else {
+            return ''
+          }
         },
         dataAutoPlay (state) {
           return state.playing
@@ -98,7 +102,7 @@
         'currentTime', 'duration'
       ]),
       ...mapState([
-        'playing', 'song', 'coverImgUrl', 'playList', 'playMode', 'isLoop', 'lyric'
+        'playing', 'song', 'playList', 'playMode', 'isLoop', 'lyric'
       ]),
       ...mapState({
         indicatorPosition (state) {
@@ -156,6 +160,7 @@
     watch: {
       song (song) {
         $('.lyric').animate({'scrollTop': 0}, 350)
+        $('body').css({'overflow': 'hidden'})
         this.$http.jsonp('https://api.darlin.me/music/lyric/' + song.id, {
           jsonp: 'callback'
         }).then(function (response) {

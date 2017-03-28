@@ -28,7 +28,7 @@
     </div>
   </transition>
 </template>
-<script type="text/javascript">
+<script type="text/ecmascript-6">
   import ListMeng from './ListMeng'
   import {mapState} from 'vuex'
   export default {

@@ -10,7 +10,7 @@
         </div>
         <div class="search-input">
           <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight" mode="out-in">
-            <input class="gxs-input" v-on:click="keyUp($event,searchInfo)" type="text" v-model="searchInfo" placeholder="搜索 歌曲/专辑/歌手">
+            <input class="gxs-input" v-on:focus="keyUp($event,searchInfo)" type="text" v-model="searchInfo" placeholder="搜索 歌曲/专辑/歌手">
           </transition>
         </div>
         <div class="search-button">

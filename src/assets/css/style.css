@@ -759,6 +759,7 @@ textarea {
   height: 100%;
 }
 .search-res-box .search-res-text {
+  white-space: nowrap;
   /* IE 9 */
   /* Safari and Chrome */
   -o-flex: 1;
@@ -769,6 +770,11 @@ textarea {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+.search-res-box .search-res-text span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .search-res-box .search-res-text .search-res-name {
   font-size: 1.4rem;
@@ -808,7 +814,7 @@ textarea {
 .audio-warp .audio-box {
   position: relative;
   z-index: 10;
-  height: 20rem;
+  height: 4.4rem;
   overflow: hidden;
 }
 .audio-warp .audio-box .audio-box-img {
@@ -870,10 +876,8 @@ textarea {
   box-shadow: 0 0 5px 0 #7d7d7d;
 }
 .audio-warp .audio-progress-warp {
-  position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
@@ -1078,7 +1082,7 @@ textarea {
 }
 .gxs-footer.audio-nav .audio-progress-warp {
   position: absolute;
-  left: 4.4rem;
+  left: 0;
   right: 0;
   bottom: 0;
   flex-wrap: wrap;
@@ -1638,6 +1642,7 @@ textarea {
   background-size: 100% auto;
 }
 .lyric {
+  margin-bottom: 1rem;
   /* IE 9 */
   /* Safari and Chrome */
   -o-flex: 1;
@@ -1672,6 +1677,7 @@ textarea {
   overflow-y: scroll;
 }
 .lyric .lyric-item {
+  white-space: normal;
   min-height: 28px;
   height: 28px;
   text-align: center;

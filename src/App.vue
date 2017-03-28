@@ -1,26 +1,32 @@
 <template>
   <div class="gxs-vh">
-    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight" leave-active-class="animated bounceOutRight">
+    <transition name="custom-classes-transition" enter-active-class="animated bounceInRight"
+                leave-active-class="animated bounceOutRight">
       <router-view></router-view>
     </transition>
 
-    <transition name="custom-classes-transition" enter-active-class="animated slideInDown fast" leave-active-class="animated slideOutUp" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated slideInDown fast"
+                leave-active-class="animated slideOutUp" mode="out-in">
       <search v-if="isSearch"></search>
     </transition>
 
-    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast"
+                leave-active-class="animated slideOutDown" mode="out-in">
       <audio-box v-show="isAudioShow"></audio-box>
     </transition>
 
-    <transition name="custom-classes-transition" enter-active-class="animated slideInUp" leave-active-class="animated slideOutDown" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp"
+                leave-active-class="animated slideOutDown" mode="out-in">
       <audio-nav v-if="isAudioNav" v-on:play="tapButton()"></audio-nav>
     </transition>
 
-    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast"
+                leave-active-class="animated slideOutDown" mode="out-in">
       <list-meng v-if="isListMeng" v-bind:ListMeng="isListMeng" v-bind:coIndex="countIndex"></list-meng>
     </transition>
 
-    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast" leave-active-class="animated slideOutDown" mode="out-in">
+    <transition name="custom-classes-transition" enter-active-class="animated slideInUp fast"
+                leave-active-class="animated slideOutDown" mode="out-in">
       <play-list v-if="isPlayList"></play-list>
     </transition>
 
@@ -90,18 +96,6 @@
       ...mapState([
         'playing', 'song', 'coverImgUrl'
       ])
-    },
-    watch: {
-      song (song) {
-        this.$http.jsonp('http://120.27.93.97/weappserver/get_music_image.php', {
-          params: {
-            mid: song.mid
-          },
-          jsonp: 'callback'
-        }).then(function (response) {
-          this.$store.state['coverImgUrl'] = response.data.url
-        })
-      }
     }
   }
 </script>

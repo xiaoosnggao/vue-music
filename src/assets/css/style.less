@@ -1029,6 +1029,12 @@ textarea {
     }
   }
   .search-res-text {
+    white-space: nowrap;
+    span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
     .flex(1);
     .search-res-name {
       font-size: 1.4rem;
@@ -1060,7 +1066,7 @@ textarea {
   .audio-box {
     position: relative;
     z-index: 10;
-    height: 20rem;
+    height: 4.4rem;
     overflow: hidden;
     .audio-box-img {
       min-width: 100%;
@@ -1100,10 +1106,8 @@ textarea {
     }
   }
   .audio-progress-warp {
-    position: absolute;
-    bottom: 1rem;
-    left: 1.5rem;
-    right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     .display-flex;
     flex-wrap: wrap;
     .audio-progress-text {
@@ -1244,7 +1248,7 @@ textarea {
     }
     .audio-progress-warp {
       position: absolute;
-      left: 4.4rem;
+      left: 0;
       right: 0;
       bottom: 0;
       flex-wrap: wrap;
@@ -1663,12 +1667,14 @@ textarea {
 }
 
 .lyric {
+  margin-bottom: 1rem;
   .flex(1);
   .display-flex;
   .flex-direction(column);
   .align-content(center);
   .touch;
   .lyric-item {
+    white-space: normal;
     min-height: 28px;
     height: 28px;
     text-align: center;
